@@ -9,6 +9,7 @@ Standardisation of geospatial information has used many platforms, including (bu
 - XML - using XSD
 - UML with various implementations
 - shapefiles
+- JSON, GeoJSON
 - RDFS/OWL
 
 A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) through the Solid Earth and Environment Grid initiative, still available at [SEEGrid](https://confluence.csiro.au/display/seegrid/Solid+Earth+and+Environment+GRID) - (originally a TWiki, partly migrated to Confluence but not really cleaned up after the migration.)
