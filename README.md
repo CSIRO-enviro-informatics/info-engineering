@@ -1,3 +1,24 @@
+# Information Engineering
+
+This repository collects a set of introductory and pedagogical materials related to information engineering and standards, primarily related to geospatial applications.
+
+Standardisation of geospatial information has used many platforms, including (but not limited to)
+
+- data dictionaries
+- XML - using DTDs
+- XML - using XSD
+- UML with various implementations
+- shapefiles
+- RDFS/OWL
+
+A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) through the Solid Earth and Environment Grid initiative, still available at [SEEGrid](https://confluence.csiro.au/display/seegrid/Solid+Earth+and+Environment+GRID) - (originally a TWiki, partly migrated to Confluence but not really cleaned up after the migration.)
+
+The documentation on this site is largely complementary to the SEEGrid resources, and reflect 10 years progress since maintenance of the SEEGrid material began to wind down. 
+
+## Technical details of this site
+
+This site is maintained as a set of **markdown** files maintained in [this repository](https://github.com/CSIRO-enviro-informatics/info-engineering) and published through GitHub pages - standard intro below
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/CSIRO-enviro-informatics/info-engineering/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
