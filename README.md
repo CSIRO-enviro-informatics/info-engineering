@@ -5,8 +5,8 @@ This repository collects a set of introductory and pedagogical materials related
 Standardisation of geospatial information has used many platforms, including (but not limited to)
 
 - data dictionaries
-- XML - using DTDs
-- XML - using XSD
+- XML - document-style, using DTDs
+- XML - data-style, using XSD
 - UML with various implementations
 - shapefiles
 - JSON, GeoJSON
