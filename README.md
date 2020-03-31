@@ -16,6 +16,12 @@ A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) thro
 
 The documentation on this site is largely complementary to the SEEGrid resources, and reflect 10 years progress since maintenance of the SEEGrid material began to wind down. 
 
+## Resources
+
+- [International standards context](standards-organizations.md)
+- [Key semantic technologies](semantic-tools.md)
+- [RDF vocabularies you can trust](trusted-rdf-vocabs.md)
+
 ## Technical details of this site
 
 This site is maintained as a set of **markdown** files maintained in [this repository](https://github.com/CSIRO-enviro-informatics/info-engineering) and published through GitHub pages - standard intro below
