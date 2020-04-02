@@ -8,6 +8,12 @@ These vocabularies are well maintained and widely used, so elements from them ca
 
 Note, however, that they were not all designed as part of a consistent suite, so if it is planned to use them in applications involving _inferencing_ or _reasoning_, then it is wise to check whether axioms or entailments have any clashes or inconsistencies between modules.  
 
+Resource Description Framework	rdf:	http://www.w3.org/1999/02/22-rdf-syntax-ns#
+Web Ontology Language	owl:	http://www.w3.org/2002/07/owl#
+Dublin Core legacy terms	dc:	http://purl.org/dc/elements/1.1/
+Dublin Core terms	dcterms:	http://purl.org/dc/terms/
+Dublin Core type vocabulary	dcmitype:	http://purl.org/dc/dcmitype/
+
 ## Descriptive metadata
 
 vocabulary | scope | prefix | namespace URI 
@@ -41,7 +47,7 @@ vocabulary | scope | prefix | namespace URI
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Organization Ontology](https://www.w3.org/TR/vocab-org/) | organizational structures and affiliations | `org:` | http://www.w3.org/ns/org#
-[Friend of a friend](http://xmlns.com/foaf/spec/) | The original social network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
+[Friend of a friend](http://xmlns.com/foaf/spec/) | The original social-network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
 [vcard](https://www.w3.org/TR/vcard-rdf/) | People, organizations, addresses | `vcard:` `v:` | http://www.w3.org/2006/vcard/ns# 
 
 
