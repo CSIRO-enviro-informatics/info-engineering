@@ -8,12 +8,6 @@ These vocabularies are well maintained and widely used, so elements from them ca
 
 Note, however, that they were not all designed as part of a consistent suite, so if it is planned to use them in applications involving _inferencing_ or _reasoning_, then it is wise to check whether axioms or entailments have any clashes or inconsistencies between modules.  
 
-Resource Description Framework	rdf:	http://www.w3.org/1999/02/22-rdf-syntax-ns#
-Web Ontology Language	owl:	http://www.w3.org/2002/07/owl#
-Dublin Core legacy terms	dc:	http://purl.org/dc/elements/1.1/
-Dublin Core terms	dcterms:	http://purl.org/dc/terms/
-Dublin Core type vocabulary	dcmitype:	http://purl.org/dc/dcmitype/
-
 ## Descriptive metadata
 
 vocabulary | scope | prefix | namespace URI 

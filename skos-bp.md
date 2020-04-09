@@ -46,8 +46,8 @@ Namespace examples:
 *   http://resource.geosciml.org/classifier/ics/ischart/
 *   http://www.opengis.net/def/
 *   http://vocab.nerc.ac.uk/collection/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Scope/
+*   http://registry.it.csiro.au/def/isotc211/MD_RestrictionCode/
+*   http://registry.it.csiro.au/def/isotc211/MD_ScopeCode/
 *   http://environment.data.gov.au/water/quality/def/property/
 *   http://environment.data.gov.au/water/quality/def/object/
 
@@ -65,7 +65,7 @@ An "Ontology Document" packages descriptions of the elements of the vocabulary a
 
 Ontology URI examples:
 
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction
+*   http://registry.it.csiro.au/def/isotc211/MD_RestrictionCode?_format=ttl
 *   http://resource.geosciml.org/vocabulary/timescale/isc-2012
 *   http://resource.geosciml.org/vocabulary/cgi/201202/faulttype
 *   http://www.w3.org/2002/07/owl
@@ -93,8 +93,8 @@ Concept URI examples:
 *   http://www.opengis.net/def/waterml/2.0/medium/GroundWater
 *   http://vocab.nerc.ac.uk/collection/A02/current/Wastewater/
 *   http://vocab.nerc.ac.uk/collection/C17/current/31EK/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/patentPending
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/trademark
+*   http://registry.it.csiro.au/def/isotc211/MD_RestrictionCode/patentPending
+*   http://registry.it.csiro.au/def/isotc211/MD_RestrictionCode/trademark
 *   http://environment.data.gov.au/water/quality/def/property/biochemical_oxygen_demand
 
 (The version numbers in these URIs generally apply to the source of the definition, rather than concept identity.)
@@ -106,13 +106,13 @@ Several 'standard' patterns have been proposed to map the URI for an off-web res
 *   [W3C Cool URIs](http://www.w3.org/TR/cooluris/) advocates a similar pattern using the tokens _/id/_ and _/doc/_.
     *   e.g. http://www.example.com/ **id**/alice is described by http://www.example.com/ **doc**/alice
 *   In SISSvoc the pattern is more explicit: the concept URI is an argument in the URI that identifies the description
-    *   http://def.seegrid.csiro.au/sissvoc/ogc-def/resource?uri=http://www.opengis.net/def/waterml/2.0/medium/GroundWater is the description of the concept `http://www.opengis.net/def/waterml/2.0/medium/GroundWater` according to the service _http://def.seegrid.csiro.au/sissvoc/ogc-def/_.
+    *   https://vocabs.ands.org.au/repository/api/lda/csiro/international-chronostratigraphic-chart/2018-revised-corrected/resource?uri=http%3A%2F%2Fresource.geosciml.org%2Fclassifier%2Fics%2Fischart%2FJurassic is the description of the concept `http://resource.geosciml.org/classifier/ics/ischart/Jurassic` according to the service `https://vocabs.ands.org.au/repository/api/lda/csiro/international-chronostratigraphic-chart/2018-revised-corrected/`.
 
 #### Collections
 
 [Collections](http://www.w3.org/TR/skos-primer/#seccollections) can be used for various purposes.
 
-One important application is to support partial URIs, treating the **concept URI as a path** so that each URI created by trimming a path element from the concept URI is realized as a skos:Collection. This provides entry points for exploring a vocabulary similar to browsing a traditional hierarchical file-system. Collections should be matched to every partial URI that the provider expects users to attempt to resolve.
+One application is to support partial URIs, treating the **concept URI as a path** so that each URI created by trimming a path element from the concept URI is realized as a skos:Collection. This provides entry points for exploring a vocabulary similar to browsing a traditional hierarchical file-system. Collections should be matched to every partial URI that the provider expects users to attempt to resolve.
 
 Collection URI examples:
 
@@ -123,17 +123,9 @@ Collection URI examples:
 *   http://www.opengis.net/def/nil/OGC/0/
 *   http://vocab.nerc.ac.uk/collection/A02/current/
 *   http://vocab.nerc.ac.uk/collection/C17/current/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Scope/
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/
 *   http://environment.data.gov.au/water/quality/def/property/
 
-A useful convention is that URIs with a trailing '/' denote fully described collections, and aliases without the trailing '/' ensure that every possible path still resolves. Alias URIs can be provided using the `owl:sameAs` property, for example:
-
-```
-<http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction>
-      owl:sameAs <http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/> .
-```
+A useful convention is that URIs with a trailing '/' denote fully described collections, and aliases without the trailing '/' ensure that every possible path still resolves. 
 
 Collections can also be used to group concepts along thematic grounds, perhaps as part of a facetted classification, if desired. In these cases the collection URI may not be the parent of the member concept URIs.
 
@@ -147,7 +139,6 @@ Concept-scheme URI examples:
 
 *   http://resource.geosciml.org/classifierscheme/ics/2012/ischart
 *   http://www.opengis.net/def/scheme
-*   http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Restriction/scheme
 *   http://environment.data.gov.au/water/quality/def/property/scheme
 
 ### Slash or Hash
@@ -177,8 +168,6 @@ The Ontology resource provides a hook primarily for metadata relating to the doc
 *   `owl:versionIRI` carries a URI that identifies the fine-grained version information, for example an SVN tag for the source file
 *   `owl:priorVersion` allows you to identify a previous version
 
-[Extended example](http://def.seegrid.csiro.au/sissvoc/isc2010/resource?uri=http://resource.geosciml.org/vocabulary/timescale/isc-2010):
-
 ```
 <http://resource.geosciml.org/vocabulary/timescale/isc-2010>
        a       owl:Ontology ;
@@ -199,8 +188,6 @@ The Ontology resource provides a hook primarily for metadata relating to the doc
 ### Concept scheme properties
 
 A concept-scheme provides a home for metadata related to the vocabulary content as a whole, including versioning. The description of a concept-scheme may be found by following the `skos:inScheme` property in a concept description.
-
-[Extended example](http://def.seegrid.csiro.au/sissvoc/isc2010/resource?uri=http://resource.geosciml.org/classifierscheme/ics/2010/ischart):
 
 ```
 <http://resource.geosciml.org/classifierscheme/ics/2010/ischart>
@@ -268,8 +255,6 @@ Each concept is described by a set of assertions using RDF properties from the c
 
 *   this allows traversal from atomic concepts to the vocabulary as a whole
 *   example: `isc:Silurian skos:inScheme <http://resource.geosciml.org/classifierscheme/ics/ischart/2010> .`
-
-[Extended example](http://def.seegrid.csiro.au/sissvoc/isc2012/resource?uri=http://resource.geosciml.org/classifier/ics/ischart/Silurian):
 
 ```
 isc:Silurian
@@ -442,7 +427,7 @@ When preparing a specific vocabulary any or all of these patterns may be applica
 
 ### Non-SKOS properties
 
-A vocabulary provided through a SISSvoc service can contain other ontological relationships. For example, this [Geologic Timescale](http://resource.geosciml.org/classifier/ics/ischart/Eras) is represented using SKOS, with Cambrian, Ordovician, Silurian etc modeled as _concepts,_ all 'narrower' than Paleozoic. But the concepts in this vocabulary are also be typed as a _boundary_ or _era_, with additional relationships that reflect topology and semantics of the [timescale model](https://www.seegrid.csiro.au/wiki/CGIModel/GeologicTime) which has been formalized as an [OWL ontology](http://resource.geosciml.org/ontology/timescale/gts-30.rdf).
+A vocabulary provided through a SISSvoc service can contain other ontological relationships. For example, this [Geologic Timescale](http://resource.geosciml.org/classifier/ics/ischart/Eras) is represented using SKOS, with Cambrian, Ordovician, Silurian etc modeled as _concepts,_ all 'narrower' than Paleozoic. But the concepts in this vocabulary are also be typed as a _boundary_ or _era_, with additional relationships that reflect topology and semantics of the [timescale model](https://confluence.csiro.au/pages/viewpage.action?pageId=433784765) which has been formalized as an [OWL ontology](https://github.com/CGI-IUGS/timescale-ont).
 
 NOTE:
 
@@ -480,6 +465,6 @@ Different patterns of usage for the extra field can result in few or many differ
 ## Complete examples
 
 *   [Geologic Timescale versions](http://resource.geosciml.org/vocabulary/timescale/)
-*   [ISO 19115 Codelists](http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/)
+*   [ISO 19115 Codelists](http://registry.it.csiro.au/def/isotc211)
 
--- [SimonCox](https://confluence.csiro.au/wiki/bin/view/Main/SimonCox) - 06 Nov 2012
+-- [SimonCox](https://confluence.csiro.au/display/~cox075) - 06 Nov 2012
