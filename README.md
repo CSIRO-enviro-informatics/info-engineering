@@ -14,13 +14,20 @@ Standardisation of geospatial information has used many platforms, including (bu
 
 A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) through the Solid Earth and Environment Grid initiative, still available at [SEEGrid](https://confluence.csiro.au/display/seegrid/Solid+Earth+and+Environment+GRID) - (originally a TWiki, partly migrated to Confluence but not really cleaned up after the migration.)
 
-The documentation on this site is largely complementary to the SEEGrid resources, and reflect 10 years progress since maintenance of the SEEGrid material began to wind down. 
+The documentation on this site is complementary to the SEEGrid resources, reflecting 10 years progress since maintenance of the SEEGrid material began to wind down. 
+The focus on this site is mainly on **semantic web** tools and technologies. 
 
 ## Resources
 
+- [Introduction to the Semantic Web Stack](semantic-stack.md)
+- [Semantic web standards](standards.md) - links to the main standards documents and resources
+- [Some key semantic technologies](semantic-tools.md) - tools and applications for working with semantic resources
+- [RDF vocabularies you can trust](trusted-rdf-vocabs.md) - starting points for re-use
+- [Metadata standards](metadata.md) - the common semantic-web metadata standards
 - [International standards context](standards-organizations.md)
-- [Key semantic technologies](semantic-tools.md)
-- [RDF vocabularies you can trust](trusted-rdf-vocabs.md)
+- [Reference Materials](reference-materials.md) - some key registers and controlled vocabularies
+- [Introductory presentations](presentations.md) - links to presentations used in this course
+- [Learning resources](learning-resources.md) - links to external presentations, videos, and readings
 
 ## Technical details of this site
 

@@ -40,16 +40,16 @@ vocabulary | scope | prefix | namespace URI
 
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
+[Friend of a friend](http://xmlns.com/foaf/spec/) | agents, persons, organizations - the original social-network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
 [Organization Ontology](https://www.w3.org/TR/vocab-org/) | organizational structures and affiliations | `org:` | http://www.w3.org/ns/org#
-[Friend of a friend](http://xmlns.com/foaf/spec/) | The original social-network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
 [vcard](https://www.w3.org/TR/vcard-rdf/) | People, organizations, addresses | `vcard:` `v:` | http://www.w3.org/2006/vcard/ns# 
-
 
 ## Encoding data 
 
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Darwin Core](https://dwc.tdwg.org/terms/) | biodiversity observations, esp. occurrences | `dwc:` <br/> `dwciri:` | http://rs.tdwg.org/dwc/terms/ <br/> http://rs.tdwg.org/dwc/iri/
+[OBO Foundry](http://www.obofoundry.org/) | Open Biological and Biomedical Ontology | `obo:` | http://purl.obolibrary.org/obo/ 
 [RDF Data Cube](https://www.w3.org/TR/vocab-data-cube/) | Tabular ('rectangular') data, surveys and statistics (SDMX) | `qb:` |   http://purl.org/linked-data/cube#
 [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/) | Metadata for observations and samples | `sosa:` <br/> `ssn:` | http://www.w3.org/ns/sosa/ <br/> http://www.w3.org/ns/ssn/ 
 [Extensions to SSN](https://www.w3.org/TR/vocab-ssn-ext/) | Observation Collections, samples and feature-of-interest links | `sosa:` <br/> `ssn:` | http://www.w3.org/ns/sosa/ <br/> http://www.w3.org/ns/ssn/ 

@@ -13,4 +13,4 @@ SKOS was built on RDF, and thus SKOS (a data sharing standard for formal logic a
 - [SKOS Play!](http://labs.sparna.fr/skos-play/convert) - convert Excel to SKOS
 - [SKOS Quality Checker](https://qskos.poolparty.biz/) based on qSKOS
 - [Key choices in the design of Simple Knowledge Organization System (SKOS)](https://doi.org/10.1016/j.websem.2013.05.001) - paper in Journal of Web Semantics
-- [Best practice in formalizing a SKOS vocabulary](https://confluence.csiro.au/display/VOCAB/Best+practice+in+formalizing+a+SKOS+vocabulary)
+- [Best practice in formalizing a SKOS vocabulary](skos-bp.md)
