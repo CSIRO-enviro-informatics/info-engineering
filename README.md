@@ -17,6 +17,8 @@ A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) thro
 The documentation on this site is complementary to the SEEGrid resources, reflecting 10 years progress since maintenance of the SEEGrid material began to wind down. 
 The focus on this site is mainly on **semantic web** tools and technologies. 
 
+[Link to gh-pages site](https://csiro-enviro-informatics.github.io/info-engineering/)
+
 ## Resources
 
 - [Introduction to the Semantic Web Stack](semantic-stack.md)
