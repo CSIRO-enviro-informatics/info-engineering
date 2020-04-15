@@ -1,7 +1,3 @@
----
-permalink: /standards.html
----
-
 # Standards for the Semantic Web and Linked Data
 
 ## RDF - the Resource Description Framework
