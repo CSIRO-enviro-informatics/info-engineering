@@ -1,7 +1,3 @@
----
-permalink: /semantic-tools.html
----
-
 # Semantic web tools
 ## Creating and maintaining RDF/OWL
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -9,6 +5,11 @@ permalink: /semantic-tools.html
 - Protege - for OWL ontologies
   - [Protégé Desktop](https://protege.stanford.edu/products.php#desktop-protege)
   - [WebProtégé](https://webprotege.stanford.edu/)
+
+## SPARQL & SHACL testing
+- [YASGUI](http://yasgui.triply.cc/) - a SPARQL query editor and tester
+  - [Yasgui API Reference](https://triply.cc/docs/yasgui-api)
+- [SHACL Playground](https://shacl.org/playground/)
 
 ## Preparing and maintaining SKOS vocabularies
 - [Excel2rdf](https://github.com/edmondchuc/excel2rdf)
@@ -23,7 +24,7 @@ permalink: /semantic-tools.html
 - [Linked Data Registry](https://github.com/UKGovLD)
 - [pyLODE](https://github.com/RDFLib/pyLODE)
 
-## SKOS quality control and remediation
+## SKOS/RDF quality control, remediation, and validation
 - [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
 - [qSKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/login)
 
