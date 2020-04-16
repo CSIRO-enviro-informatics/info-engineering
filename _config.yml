@@ -1,2 +1,2 @@
-theme: jekyll-theme-chirpy
+theme: jekyll-theme-minimal
 permalink: /:basename:output_ext
