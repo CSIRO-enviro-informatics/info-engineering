@@ -1,7 +1,3 @@
----
-permalink: /presentations.html
----
-
 # Presentations
 
 - [Designing Data for the Open World of the Web](./docs/Baker_20120606_2100-linked-data.pptx) - [_Tom Baker_](https://github.com/tombaker)

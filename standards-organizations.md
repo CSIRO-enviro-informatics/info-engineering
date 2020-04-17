@@ -1,7 +1,3 @@
----
-permalink: /standards-organizations.html
----
-
 # International standards context
 
 Organization | Abbreviation/Acronym | Scope | comments

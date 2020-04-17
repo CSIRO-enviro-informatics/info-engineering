@@ -1,6 +1,6 @@
 # Information Engineering
 
-This repository collects a set of introductory and pedagogical materials related to information engineering and standards, primarily related to geospatial applications.
+This repository collects a set of introductory and pedagogical materials related to information engineering and standards, mainly using semantic web standards and platforms. The application examples are primarily technical, scientific and geospatial. 
 
 Standardisation of geospatial information has used many platforms, including (but not limited to)
 
@@ -12,7 +12,8 @@ Standardisation of geospatial information has used many platforms, including (bu
 - JSON, GeoJSON
 - RDFS/OWL
 
-A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) through the Solid Earth and Environment Grid initiative, still available at [SEEGrid](https://confluence.csiro.au/display/seegrid/Solid+Earth+and+Environment+GRID) - (originally a TWiki, partly migrated to Confluence but not really cleaned up after the migration.)
+A lot of patterns and 'how-tos' were developed by [CSIRO](https://csiro.au) through the Solid Earth and Environment Grid initiative, still available at [SEEGrid](https://confluence.csiro.au/display/seegrid/Solid+Earth+and+Environment+GRID). 
+Note that this was originally a TWiki, which was migrated to Confluence but incompletely cleaned up after the migration.
 
 The documentation on this site is complementary to the SEEGrid resources, reflecting 10 years progress since maintenance of the SEEGrid material began to wind down. 
 The focus on this site is mainly on **semantic web** tools and technologies. 

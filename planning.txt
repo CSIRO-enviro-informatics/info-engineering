@@ -1,0 +1,46 @@
+numbers/participants
+
+7 core project team
+BAs, solution architects, subject matter experts (vocabs)
+
+9 Data governance/technical - all scientists
+(separate group to drive decisions)
+- metadata schema ()
+- vocabularies
+
+Wider departmental group need insights
+
+2 - science information services
+
+1-hour sessions to start
+
+-------
+
+Vendor selected to implement CKAN - Salsa Digital (Vic open data portal)
+
+Stage 1 == MVP catalog, with representative datasets
+
+Semantics/Linked Data
+Metadata standards - 
+DCATv2 vs Schema.org vs ISO 19115 vs DCMI
+Metadata profiles
+profile - DCAT + SOSA
+Controlled vocabularies - 
+
+Domains 
+- coastal
+- air-quality
+- biodiversity
+- soils
+- remote sensing
+- grazing
+- hydrology
+- climate
+
+Representative datasets
+- about 5 of
+
+Simons availability week of 20th, weeks forward
+- 2 * 1(-2) hour sessions per week
+Platform: teams vs. webex
+- Simon to schedule a webex test with Dan & Peter

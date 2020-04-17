@@ -1,7 +1,3 @@
----
-permalink: /skos.html
----
-
 # SKOS - the W3C Simple Knowledge Organization System
 
 (SKOS) is based on a vocabulary/thesaurus model, and was designed primarily to formalize existing vocabularies using the semantic web tools, and also smooth the transition towards the richer logic-based tools from ontology modeling. The aim of SKOS is to enable pre-existing controlled vocabularies to be consumed on the web and to allow vocabulary creators to publish born-digital vocabularies on the web.  To understand SKOS you have to have a basic understanding of controlled vocabularies (hierarchical relationships, broader and narrower terms where each node has a relationship)

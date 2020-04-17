@@ -1,7 +1,3 @@
----
-permalink: /reference-material.html
----
-
 # Reference materials - registers and vocabularies
 ## IANA registers
 - [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relations typically used in HTTP headers
@@ -22,6 +18,7 @@ permalink: /reference-material.html
 - [GEMET Thesaurus](https://www.eionet.europa.eu/gemet/en/webservices/) - General Multilingual _Environmental Thesaurus_ 
 - [GSQ vocabularies](https://github.com/geological-survey-of-queensland/vocabularies/tree/master/vocabularies) - Geology, resources
 - [Queensland CORVEG Database Vocabularies](https://linkeddata.tern.org.au/viewer/corveg/) - Ecology surveys
+- [R2R Controlled Vocabularies](https://www.rvdata.us/about/technical-details/vocabularies) - Oceanography
 - [SWEET](https://github.com/ESIPFed/sweet)
 - UK Centre for Ecology and Hydrology 
   - [Metadata vocabulary](http://vocabs.ceh.ac.uk/edg/tbl/cehmd.editor)

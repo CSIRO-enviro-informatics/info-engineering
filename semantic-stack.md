@@ -1,17 +1,25 @@
----
-permalink: /semantic-stack.html
----
-
 # Introduction to the semantic web stack
 
+History of semantic web - tagging meets logic
 
+tagging ~= metadata
+
+flexibility and scalability
+persistent identifiers
+Entity-Attribute-Value model (traditionally considered an anti-pattern) - sacrifices performance for flexibility ... 
+- performance comes with limitations, very use-case specific
 
 
 Logic: 
-RDF - URIs, statements, directed-labeled-graph, type/class assignment, reification
+RDF - URIs, statements, directed-labeled-graph (knowledge graph), type, reification
 RDFS - sub-class, sub-property, domain/range - property-centric constraints ('global')
 OWL - object vs datatype properties, annotation-, inverse-, functional-, symmetric-, transitive properties ... disjoint, equivalent-class, -property, sameAs, union class, class-centric constraints ('guarded' or 'restricted), 
 SKOS - concepts(individuals) vs. classes; *match
+
+t-box (~classes & properteis) vs a-box (individuals) ontologies
+All expressed in RDF
+i.e. mix schema & instance-level in same place
+
 
 Processing:
 SPARQL - query

@@ -1,8 +1,9 @@
 # Semantic web tools
 ## Creating and maintaining RDF/OWL
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/) - for RDF, SPARQL, SHACL
-- Protege - for OWL ontologies
+- [Visual Studio Code](https://code.visualstudio.com/) - text editor with syntax highlighting (and lots of integration ...)
+- [TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/) - for **RDF, SPARQL, SHACL**
+  - [download](https://www.topquadrant.com/topbraid-composer-install/)
+- Protege - for **OWL ontologies**
   - [Protégé Desktop](https://protege.stanford.edu/products.php#desktop-protege)
   - [WebProtégé](https://webprotege.stanford.edu/)
 
