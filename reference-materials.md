@@ -24,9 +24,7 @@
   - [Metadata vocabulary](http://vocabs.ceh.ac.uk/edg/tbl/cehmd.editor)
   - [Topic classification](http://vocabs.ceh.ac.uk/edg/tbl/cehmd.editor#http%3A%2F%2Fonto.nerc.ac.uk%2FCEHMD%2Ftopic)
   - [_EnvThes_ Environment thesaurus](http://vocabs.ceh.ac.uk/edg/tbl/EnvThes.editor) 
-
-## Spatio-temporal 
-
+### Spatio-temporal 
 - [ISO Geodetic Registry](https://geodetic.isotc211.org/) - coordinate reference systems, datums, etc
 - [EPSG Geodetic Parameters](http://www.epsg-registry.org/)
   - [EPSG Dataset](http://www.epsg.org/EPSGDataset/DownloadDataset.aspx)
