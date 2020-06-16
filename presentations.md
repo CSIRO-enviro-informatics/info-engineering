@@ -10,4 +10,4 @@
 - [Vocabulary services]()
 - [Data quality, provenance]()
 - Modeling - [Describing real world applications using ontologies](https://docs.google.com/presentation/d/19N2moAypUyuqYPIWSOE4mb0wIBVhFPenbpOkq3u4sYo) - [_Simon Cox_](https://orcid.org/0000-0002-3884-3420)
-
+- [Linked Data APIs]()
