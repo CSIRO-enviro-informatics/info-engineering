@@ -24,6 +24,8 @@
 - [VocPrez](https://github.com/GeoscienceAustralia/VocPrez)
 - [Linked Data Registry](https://github.com/UKGovLD)
 - [pyLODE](https://github.com/RDFLib/pyLODE)
+- [ELDA](https://github.com/epimorphics/elda)
+- [pyLDAPI](https://github.com/RDFLib/pyLDAPI)
 
 ## SKOS/RDF quality control, remediation, and validation
 - [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
