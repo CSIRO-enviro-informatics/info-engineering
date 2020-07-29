@@ -1,0 +1,9 @@
+@prefix :   <http://example.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+:BBKing  a foaf:Person ;
+  :is_born_on "1925-09-16"^^xsd:date ;
+  :plays_instrument :Guitar 
+.

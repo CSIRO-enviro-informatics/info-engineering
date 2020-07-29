@@ -92,6 +92,7 @@ As you can see from the above, the RDF statements have not changed, however, the
 
 The last thing to note about the above examples is the use of *namespaces*. As a general principle, we encourage the re-use of defined properties and well-known types as this enables greater data integration opportunities and leveraging common tools to parse/render the data with. `foaf` (or Friend-of-a-Friend) is an example of a namespace with well-known properties and types, and is used in the above example to express that B.B. King is a person. It allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/). There may be a number of domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains e.g, [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment.
 
+Refer to *Section 1* of the "Linked Data Example 1.ipynb" Jupyter Notebook example.
 
 ### "Conneg" (Content-negotiation)
 
