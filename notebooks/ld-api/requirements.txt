@@ -1,2 +1,6 @@
 rdflib 
 requests
+rdflib-jsonld 
+rdflib 
+sparqlwrapper
+ipyleaflet
