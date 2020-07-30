@@ -1,0 +1,10 @@
+{% extends "site_page_layout.html" %}
+
+{% block content %}
+    <h1>Dog</h1>
+    {{ name }}
+    <h2>Other views</h2>
+    
+    <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
+    <!--<p>Other views of this Sample are listed in the <a href="http://pid.geoscience.gov.au/site/ga/{{ site_no }}?_view=alternates">Alternates View</a>.</p>-->
+{% endblock %}

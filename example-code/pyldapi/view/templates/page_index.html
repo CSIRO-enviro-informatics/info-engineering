@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Example LD API</h1>    
+    <h2>Starting points</h2>
+    <h3>Register</h3>
+    <ul>
+        <li> <a href="{{ request.host_url }}pets/">Register of pets</a> </li>
+    </ul>
+   
+    <h3>Test endpoints</h3>
+    <ul>
+        <li>
+            <a href="{{ request.host_url }}pet/dog/Rex">Dog = Rex</a>
+        </li>
+    </ul>
+    
+    <h2>More information</h2>
+    <p>See the <a href="/about">About Page</a> for more information.</p>
+    <p>See <a href="/api/doc">/api/doc</a> for the OpenAPI description.</p>
+
+{% endblock %}

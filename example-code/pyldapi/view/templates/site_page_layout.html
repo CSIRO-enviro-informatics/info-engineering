@@ -1,0 +1,17 @@
+{% if organisation_branding is not defined %}
+    {% set organisation_branding = 'default_theme' %}
+{% endif %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Example LD API</title>
+    {% set css = organisation_branding + '_theme.css' %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/' + css)}}" />
+</head>
+<body>
+    <div id="container-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

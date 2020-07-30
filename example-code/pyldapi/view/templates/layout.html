@@ -1,0 +1,23 @@
+{% if organisation_branding is not defined %}
+    {% set organisation_branding = 'default_theme' %}
+{% endif %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Example LD API</title>
+    {% set css = organisation_branding + '_theme.css' %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/' + css)}}" />
+    <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}">
+</head>
+<body>
+    {% set header = organisation_branding + '/header.html' %}
+    {% set footer = organisation_branding + '/footer.html' %}
+    {% set nav = organisation_branding + '/nav.html' %}
+    {% include header %}
+    <div id="container-content">
+        {% block content %}{% endblock %}
+    </div>
+    {% include footer %}
+</body>
+</html>
