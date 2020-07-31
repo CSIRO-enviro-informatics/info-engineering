@@ -2,7 +2,7 @@
 
         {% block content %}
         <h1>{{ label }}</h1>
-        <h2>Register View</h2>
+        <h2>Container Members View</h2>
         <!--<h3>Classes of item in this Register:</h3>-->
         {% for class in contained_item_classes %}
             <span><h3>Of <a href="{{ class }}">{{ class }}</a> class items</h3></span>
@@ -17,7 +17,7 @@
                 <td style="vertical-align:top; width:500px;">
                     <h3>Items in this Register</h3>
                     <ul>
-                    {%- for item in register_items -%}
+                    {%- for item in members -%}
                         {%- if item is not string %}
                         <li class="no-line-height"><a href="{{ item[0] }}">{{ item[1] }}</a></li>
                         {%- else %}

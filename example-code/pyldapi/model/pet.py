@@ -8,8 +8,7 @@ import _config as config
 import json
 
 
-MyPetView = Profile("http://example.org/def/mypetview", "PetView", "A profile of my pet.", ['text/html', 'application/json', 'text/turtle'],
-                 'text/html')
+MyPetView = Profile("http://example.org/def/mypetview", "PetView", "A profile of my pet.", ['text/html', 'text/turtle'], 'text/html')
 
 class PetRenderer(Renderer):
     def __init__(self, request, uri, instance, pet_html_template, **kwargs):
@@ -26,10 +25,7 @@ class PetRenderer(Renderer):
 
     def _render_mypetview(self):
         self.headers['Profile'] = 'http://example.org/def/mypetview'
-        if self.mediatype == "application/json":
-            return Response(json.dumps(self.instance),
-                            mimetype="application/json", status=200)
-        elif self.mediatype == "text/html":
+        if self.mediatype == "text/html":
             return Response(render_template(self.pet_html_template, **self.instance))
         elif self.mediatype == "text/turtle":
             return Response(self.export_rdf(self, rdf_mime='text/turtle'),

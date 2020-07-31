@@ -2,7 +2,9 @@
 
 {% block content %}
     <h1>Dog</h1>
-    {{ name }}
+    <p>Name: {{ name }}</p>
+    <p>Breed: {{ breed}}</p>
+
     <h2>Other views</h2>
     
     <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
