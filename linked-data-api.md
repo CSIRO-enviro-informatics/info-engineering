@@ -122,10 +122,14 @@ For Linked Data applications, these are generally the mime-types that are accomo
 * `application/n-triples` (N-Triples serialisation)
 
 
+Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 1: By Media Type".
 
 #### By profile
 
 See https://www.w3.org/TR/dx-prof-conneg/
+
+Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 2: By Profile".
+
 
 ### Linked Data APIs
 
@@ -136,66 +140,35 @@ Linked Data APIs (LD-APIs) and implementation software enable the publication of
 
 ## Practice
 
-This section outlines practical aspects of applying Linked Data APIs in implementations as well
-as examples deployed.
+This section outlines practical aspects of applying Linked Data APIs in implementations as well as examples deployed.
 
 ### Code libraries
 
-pyLDAPI
-https://pypi.org/project/pyldapi/
+Code libraries for implementing Linked Data APIs are listed below:
 
-ELDA
-http://epimorphics.github.io/elda/current/index.html
+|  Library | URL  | Comments  | 
+|---|---|---|
+| pyLDAPI  |  https://pypi.org/project/pyldapi/ |   |
+|  ELDA |  http://epimorphics.github.io/elda/current/index.html |
+|SKOSMOS |  http://www.skosmos.org/ | |
+| Linked Data Registry  | http://ukgovld.github.io/ukgovldwg/guides/registry.html   |   |
 
-SKOSMOS
-http://www.skosmos.org/
 
-Linked Data Registry
-http://ukgovld.github.io/ukgovldwg/guides/registry.html 
 
 ### Implementations/instances
 
+A list of Linked Data API implementations and instances are listed below with the LDAPI Library used included.
 
-
-https://www.geo.admin.ch/en/geo-services/geo-services/linkeddata.html
-
-Geoscience Australia
-http://pid.geoscience.gov.au/sample/
-
-#### pyLDAPI
-
-
-Loc-I Dataset APIs
-https://asgsld.net/
-
-G-NAF Dataset APIs
-https://gnafld.net/
-
-
-
-#### SISSVoc/ELDA
-
-
-ARDC's RVA 
-https://documentation.ardc.edu.au/display/DOC/Linked+Data+API
-
-#### SKOSMOS
-
-http://vocabularies.unesco.org/browser/thesaurus/en/
-http://aims.fao.org/vest-registry/vocabularies/agrovoc
-http://finto.fi/en/
-
-#### Linked Data Registry
-
-Ordnance Survey Linked Data Platform
-http://data.ordnancesurvey.co.uk/
-
-Environment Registry
-http://environment.data.gov.uk/registry/
-
-WMO codes registry
-http://codes.wmo.int/
-
-CSIRO Linked DAta Registry
-http://registry.it.csiro.au/?_browse=true
-
+|  Implementation | URL  | LDAPI Library  | 
+|---|---|---|
+| Loc-I ASGS Dataset  |  https://asgsld.net/ |  pyLDAPI |
+|  G-NAF Dataset  |  https://gnafld.net/ |  pyLDAPI |
+|Geoscience Australia Samples Registry |  http://pid.geoscience.gov.au/sample/ | pyLDAPI |
+| ARDC's RVA  | https://documentation.ardc.edu.au/display/DOC/Linked+Data+API | ELDA/SISSVoc  |
+| UNESCO Thesaurus |http://vocabularies.unesco.org/browser/thesaurus/en/|SKOSMOS|
+| AGROVOC (FAO) |http://aims.fao.org/vest-registry/vocabularies/agrovoc|SKOSMOS|
+| Finnish Library vocabulary | http://finto.fi/en/ | SKOSMOS |
+| Ordnance Survey Linked Data Platform | http://data.ordnancesurvey.co.uk/ | Linked Data Registry |
+| Environment Registry | http://environment.data.gov.uk/registry/ | Linked Data Registry |
+| WMO codes registry | http://codes.wmo.int/ | Linked Data Registry |
+| CSIRO Linked Data Registry| http://registry.it.csiro.au/?_browse=true | Linked Data Registry |
