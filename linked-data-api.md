@@ -126,9 +126,12 @@ Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 1: By Media T
 
 #### By profile
 
+TODO: Add more content on conneg by profile 
+
 See https://www.w3.org/TR/dx-prof-conneg/
 
 Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 2: By Profile".
+
 
 
 ### Linked Data APIs
@@ -154,7 +157,6 @@ Code libraries for implementing Linked Data APIs are listed below:
 | Linked Data Registry  | http://ukgovld.github.io/ukgovldwg/guides/registry.html   |   |
 
 
-
 ### Implementations/instances
 
 A list of Linked Data API implementations and instances are listed below with the LDAPI Library used included.
@@ -172,3 +174,25 @@ A list of Linked Data API implementations and instances are listed below with th
 | Environment Registry | http://environment.data.gov.uk/registry/ | Linked Data Registry |
 | WMO codes registry | http://codes.wmo.int/ | Linked Data Registry |
 | CSIRO Linked Data Registry| http://registry.it.csiro.au/?_browse=true | Linked Data Registry |
+
+
+
+### Worked example using pyLDAPI
+
+Use the `/example-code/pyldapi` directory as a starting point and a template for an implementation of a 
+pyLDAPI service.
+
+TODO: Create a tutorial for describing what's there
+
+TODO: Add a section about modifying it to include additional data items
+
+TODO: Add a section about modifying it to add features to the Pet Dog view
+
+TODO: Add a section about modifying it to refactor the data structure and reflect in the API views
+
+TODO: Add a section about modifying it to add a new media type
+
+TODO: Add a section about modifying it to add a new profile 
+
+TODO: Add a section about modifying it to include additional registers and new data type
+
