@@ -1,9 +1,10 @@
 # Linked Data APIs: theory and practice
 
-Learning goals:
-* Introduce Linked Data concepts
-* Introduce Linked Data APIs
-* Provide links to reference material and example Linked Data API implementations
+1. Introduce Linked Data concepts
+2. Introduce Linked Data APIs
+3. Understand Linked Data API implementations and different implementation styles (via links and examples)
+4. Use python to interact with Linked Data Systems
+5. Understand how to deploy a Linked Data API implementation using pyldapi v3
 
 ## Theory
 
