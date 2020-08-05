@@ -11,43 +11,46 @@
 This section outlines theoretical aspects of Linked Data API design, rationale and related background.
 
 
-### Background and designs
+### Linked Data
 
+The term Linked Data refers to a set of practices for publishing structured data on the Web. 
+These principles were described by Tim Berners-Lee in the design issue note [Linked Data](https://www.w3.org/wiki/LinkedData). The principles are:
 
-#### Linked Data
-
-Linked Data is a way of publishing and interlinking structured data on the web using RDF. Resources and links between resources can be described in machine readable syntax along with human labels using RDF, thus allowing both human-readable and machine-readable content/interaction to access data resources and their
-descriptive metadata using existing web technologies
-simply by dereferencing HTTP URIs. 
-
-
-https://www.w3.org/wiki/LinkedData
-> The term Linked Data refers to a set of best practices for publishing structured data on the Web. These principles have been coined by Tim Berners-Lee in the design issue note Linked Data. The principles are:
->
-> 1. Use URIs as names for things
-> 2. Use HTTP URIs so that people can look up those names.
-> 3. When someone looks up a URI, provide useful information.
-> 4. Include links to other URIs. so that they can discover more things.
-> 
+1. Use URIs as names for things
+2. Use HTTP URIs so that people can look up those names.
+3. When someone looks up a URI, provide useful information.
+4. Include links to other URIs. so that they can discover more things.
+ 
 > The idea behind these principles is on the one hand side, to use standards for the representation and the access to data on the Web. On the other hand, the principles propagate to set hyperlinks between data from different sources. These hyperlinks connect all Linked Data into a single global data graph, similar as the hyperlinks on the classic Web connect all HTML documents into a single global information space. Thus, LinkedData is to spreadsheets and databases what the Web of hypertext documents is to word processor files. The Linked Open Data cloud diagramms give an overview of the linked data sets that are available on the Web.
 
+Linked Data is a way of publishing and interlinking structured data on the web. 
+Resources, and links between resources, can be described in machine readable syntax together with human labels. 
+Most often this relies on the 'semantic web' technology stack, with data structured using RDF, and links encoded as HTTP URIs. 
+This allows both human-readable and machine-readable content/interaction to access data resources and their
+descriptive metadata simply by dereferencing HTTP URIs. 
+
+### Elements of RDF
+#### RDF Statements or Triples
 The _Resource Description Framework (RDF)_ is a W3C standard (Hayes and Patel-Schneider 2014).  Information elements consist of RDF statements. An RDF statement consist of three parts: _Subject_, _Predicate_, and _Object_. This is called a _triple_.
 
-*Identifiers* are a key building block of RDF and _Uniform Resource Identifiers (URIs)_ are used to identify a resource. URIs can appear in each part of a triple, i.e. _Subjects_, _Predicates_ and _Objects_. Where an _Object_ is a _URI_, this may also be a subject for another statement. *Literals* are another key part of RDF and are used to capture basic values other than a URI. e.g. strings such as "Gerald", dates such as "1 April 2019", and numbers such as "4897". Literals are associated with a datatype so that it can be parsed. Literals may only appear in the object part of a RDF statement. 
+*Identifiers* are a key building block of RDF and _Uniform Resource Identifiers (URIs)_ are used to identify a resource. 
 
-RDF statements are collected together within an _RDF Graph_. Figure 1 below show an example of an RDF graph encoding information about the singer B.B. King.
+URIs can appear in each part of a triple, i.e. _Subject_, _Predicate_, _Object_. 
+Where an _Object_ is a _URI_, this may also be a subject for another statement. *Literals* are another key part of RDF and are used to capture basic values other than a URI. e.g. strings such as "Gerald", dates such as "1 April 2019", and numbers such as "4897". Literals are associated with a datatype so that it can be parsed. Literals may only appear in the object part of a RDF statement. 
+
+A set of RDF statements is collected together in an _RDF Graph_. Figure 1 below show an example of an RDF graph encoding information about the singer B.B. King.
 
 ![Figure 1. RDF Example: BB king](img/bb-king-rdf-example.png)
 
 Pseudo-RDF statement
-```
-<B.B. King> <is a> <person>.
-<B.B. King> <is born on> <the 16th of September 1925>. 
-<B.B. King> <plays instrument> <guitar>
+```turtle
+<B.B. King> <is a> <person> .
+<B.B. King> <is born on> <the 16th of September 1925> . 
+<B.B. King> <plays instrument> <guitar> .
 ```
 
 Valid RDF Statement expressed via the Turtle serialisation
-```
+```turtle
 @prefix :   <http://example.org/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -60,7 +63,7 @@ Valid RDF Statement expressed via the Turtle serialisation
 ```
 
 Equivalent RDF/XML serialisation
-```
+```xml
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:ex="http://example.org/"
@@ -75,7 +78,7 @@ Equivalent RDF/XML serialisation
 ```
 
 Equivalent JSON-LD serialization
-```
+```json
 {
   "@id": "http://example.org/BBKing",
   "@type": "http://xmlns.com/foaf/0.1/Person",
@@ -89,9 +92,17 @@ Equivalent JSON-LD serialization
 }
 ```
 
-As you can see from the above, the RDF statements have not changed, however, they can be encoded or *serialised* via different content types - JSON-LD, RDF/XML or Turtle (and more). This provides more options for developing applications for users and consumers of this data. Some consumers implementing web browser applications may prefer the JSON-LD serialisation as there are compatible web front-end libraries to consume the data. Others may prefer the other content types (RDF/XML, Turtle, N-Triples) which may be supported by programming languages such as Java and Python.
+#### Serialized forms
 
-The last thing to note about the above examples is the use of *namespaces*. As a general principle, we encourage the re-use of defined properties and well-known types as this enables greater data integration opportunities and leveraging common tools to parse/render the data with. `foaf` (or Friend-of-a-Friend) is an example of a namespace with well-known properties and types, and is used in the above example to express that B.B. King is a person. It allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/). There may be a number of domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains e.g, [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment.
+The RDF statements in each of these examples is the same, but encoded or *serialised* via different content types - JSON-LD, RDF/XML or Turtle (and more). This provides more options for developing applications for users and consumers of this data. Some consumers implementing web browser applications may prefer the JSON-LD serialisation as there are compatible web front-end libraries to consume the data. Others may prefer the other content types (RDF/XML, Turtle, N-Triples) which may be supported by programming languages such as Java and Python.
+
+#### Namespaces 
+
+The last thing to note about the above examples is the use of *namespaces*. Each *namespace* denotes a "vocabulary" which is a set of RDF terms. A prefix can be associated with a namespace which allows a URI from that namespace to be aliased to a more compact "colonised" form - e.g. `foaf:Person` &Implies; `<http://xmlns.com/foaf/0.1/Person>`. 
+
+There are many existing vocabularies published by W3C, DCMI, the OBO foundation, OGC, and various other initiatives including the Australian Government through AGLDWG. 
+A selection of vocabularies recommended for re-use are listed in [RDF vocabularies you can trust](trusted-rdf-vocabs). 
+As a general principle, if your application re-uses properties and types from well-known vocabularies then this enables greater data integration opportunities and the use of common tools to parse/render the data. For example, `FOAF` (or Friend-of-a-Friend) is a namespace with properties and types for describing people. It is used in the above example to express that B.B. King is a person. Use of FOAF allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/), [`dcterms:`](http://purl.org/dc/terms/). Domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains include [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment.
 
 Refer to *Section 1* of the "Linked Data Example 1.ipynb" Jupyter Notebook example.
 
