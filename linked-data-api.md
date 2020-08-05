@@ -1,5 +1,29 @@
 # Linked Data APIs: theory and practice
 
+<!-- TOC depthFrom:2 -->
+
+- [Linked Data APIs: theory and practice](#linked-data-apis-theory-and-practice)
+  - [Purpose](#purpose)
+  - [Theory](#theory)
+    - [Linked Data](#linked-data)
+    - [Elements of RDF](#elements-of-rdf)
+      - [RDF Statements or Triples](#rdf-statements-or-triples)
+      - [Serialized forms](#serialized-forms)
+      - [Namespaces](#namespaces)
+    - ["Conneg" (Content-negotiation)](#conneg-content-negotiation)
+      - [By format / media-type](#by-format--media-type)
+      - [By profile](#by-profile)
+    - [Linked Data APIs](#linked-data-apis)
+  - [Practice](#practice)
+    - [Code libraries](#code-libraries)
+    - [Implementations/instances](#implementationsinstances)
+    - [Worked example using pyLDAPI](#worked-example-using-pyldapi)
+
+<!-- /TOC -->
+
+## Purpose
+
+
 1. Introduce Linked Data concepts
 2. Introduce Linked Data APIs
 3. Understand Linked Data API implementations and different implementation styles (via links and examples)
