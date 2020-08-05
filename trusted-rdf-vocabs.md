@@ -1,7 +1,3 @@
----
-permalink: /trusted-rdf-vocabs.html
----
-
 # RDF vocabularies you can trust
 
 These vocabularies are well maintained and widely used, so elements from them can reasonably be adopted in new ontologies. 
