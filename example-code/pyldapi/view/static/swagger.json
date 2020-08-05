@@ -1,0 +1,177 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Geometry Data Service",
+    "version": "1.0.0",
+    "title": "Geometry Data Service",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "geometry",
+      "description": "Geometries"
+    },
+    {
+      "name": "search",
+      "description": "Perform search functions"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/geometry": {
+      "get": {
+        "tags": [
+          "geometry"
+        ],
+        "summary": "List geometries available",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/html",
+          "text/turtle",
+          "application/rdf+xml",
+          "application/ld+json",
+          "text/n3",
+          "application/n-triples"
+        ]
+      }
+    },
+    "/geometry/{dataset_geomId}": {
+      "get": {
+        "tags": [
+          "geometry"
+        ],
+        "summary": "Get geometry instance",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "produces": [
+          "text/turtle",
+          "text/html",
+          "text/plain",
+          "application/json",
+          "application/geo+json"
+        ],
+        "operationId": "getGeometryByDatasetIdGeomId",
+        "parameters": [
+          {
+            "name": "dataset_geomId",
+            "in": "path",
+            "description": "Dataset and Geometry ID",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/search/latlng/{x},{y}": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "Get geometry instance",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/html"
+        ],
+        "operationId": "searchGeomByLatLng",
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "description": "y",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "crs",
+            "in": "query",
+            "description": "y",
+            "required": false,
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "/search/latlng/{x},{y}/dataset/{dataset_id}": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "Get geometry instance",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "produces": [
+          "text/html",
+          "application/json"
+        ],
+        "operationId": "searchGeomByLatLngAndDatasetId",
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "description": "y",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "description": "dataset id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "crs",
+            "in": "query",
+            "description": "y",
+            "required": false,
+            "type": "number"
+          }
+        ]
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about the Geometry Data Service",
+    "url": "https://github.com/CSIRO-enviro-informatics/geometry-data-service"
+  }
+}

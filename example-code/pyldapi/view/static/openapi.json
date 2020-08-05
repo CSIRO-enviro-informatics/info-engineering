@@ -1,0 +1,440 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Geometry Data Service",
+    "version": "1.0.0",
+    "title": "Geometry Data Service",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags": [
+    {
+      "name": "geometry",
+      "description": "Geometries"
+    },
+    {
+      "name": "dataset",
+      "description": "Dataset"
+    },
+    {
+      "name": "search",
+      "description": "Perform search functions"
+    }
+  ],
+  "paths": {
+    "/geometry": {
+      "get": {
+        "tags": [
+          "geometry"
+        ],
+        "summary": "List geometries available",
+        "description": "",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page ID. Defaults to 1 if not specified",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page. Defaults to 10 if none specified.",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "_format",
+            "in": "query",
+            "description": "Media type. If none selected, defaults to 'text/html' or whatever is in the Accept header.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "text/html",
+                "application/json",
+                "text/turtle",
+                "text/plain",
+                "text/html",
+                "application/rdf+xml",
+                "application/ld+json",
+                "text/n3",
+                "application/n-triples"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/turtle": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/rdf+xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/n3": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/n-triples": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/geometry/{geomId}": {
+      "get": {
+        "tags": [
+          "geometry"
+        ],
+        "summary": "Get individual geometry",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/turtle": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/geo+json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "getGeometryByGeomId",
+        "parameters": [
+          {
+            "name": "geomId",
+            "in": "path",
+            "description": "Geometry ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_view",
+            "in": "query",
+            "description": "View. If none selected, defaults to 'geometryview'.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "geometryview",
+                "centroid",
+                "simplifiedgeom",
+                "alternates"
+              ]
+            }
+          },
+          {
+            "name": "_format",
+            "in": "query",
+            "description": "Media type. If none selected, defaults to 'text/html' or whatever is in the Accept header.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "text/html",
+                "application/json",
+                "text/turtle",
+                "text/plain"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/dataset": {
+      "get": {
+        "tags": [
+          "dataset"
+        ],
+        "summary": "List datasets available",
+        "description": "Lists datasets available",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page ID. Defaults to 1 if not specified",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page. Defaults to 10 if none specified.",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "_format",
+            "in": "query",
+            "description": "Media type. If none selected, defaults to 'text/html' or whatever is in the Accept header.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "text/html",
+                "application/json",
+                "text/turtle",
+                "text/plain",
+                "text/html",
+                "application/rdf+xml",
+                "application/ld+json",
+                "text/n3",
+                "application/n-triples"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/turtle": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/rdf+xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/n3": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/n-triples": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/latlng/{x},{y}": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "Get individual geometries that contain the specified position",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "searchGeomByPosition",
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "example": 142.111
+            }
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "description": "y",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "example": -32.1231
+            }
+          },
+          {
+            "name": "crs",
+            "in": "query",
+            "description": "crs",
+            "required": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ]
+      }
+    },
+    "/search/latlng/{x},{y}/dataset/{dataset_id}": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "Get individual geometries that contain the specified position and are associated with the dataset specified.",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "searchGeomByPositionAndDataset",
+        "parameters": [
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "y",
+            "in": "path",
+            "description": "y",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "description": "dataset id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "crs",
+            "in": "query",
+            "description": "y",
+            "required": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about the Geometry Data Service",
+    "url": "https://github.com/CSIRO-enviro-informatics/geometry-data-service"
+  },
+  "servers": [
+    {
+      "url": "/"
+    },
+    {
+      "url": "http://gds.loci.cat/"
+    }
+  ]
+}

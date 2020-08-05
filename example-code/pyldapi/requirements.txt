@@ -1,0 +1,9 @@
+requests
+flask
+flask_paginate
+lxml
+rdflib
+pyldapi
+pytest
+flask-cors
+flask_swagger_ui

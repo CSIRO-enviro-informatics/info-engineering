@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ register_name }} Linked Data API</h1>
+    {% if class_uri %}
+        <h3>Alternates of a <a href="{{ class_uri }}">{{ class_uri }}</a></h3>
+    {% else %}
+        <h3>Alternates</h3>
+    {% endif %}
+    {% if instance_uri %}
+        <h3>Instance <a href="{{ instance_uri }}">{{ instance_uri }}</a></h3>
+    {% endif %}
+    <p>Default profile: <a href="{{ request.base_url }}?_profile={{ default_profile_token }}">{{ default_profile_token }}</a></p>
+    <table class="pretty alternates">
+    <tr><th>Profile</th><th>Media Type</th><th>Profile Desc.</th><th>Profile Namespace</th></tr>
+    {% for v, vals in profiles.items() %}
+            <tr>
+                <td><a href="{{ request.base_url }}?_profile={{ v }}">{{ v }}</a></td>
+                <td>
+                {% for f in vals['mediatypes'] %}
+                    <a href="{{ request.base_url }}?_profile={{ v }}&_mediatype={{ f }}">{{ f }}</a>
+                    {% if loop.index != vals['formats']|length %}<br />{% endif %}
+                {% endfor %}
+                </td>
+                <td>{{ vals['namespace'] }}</td>
+                <td>{{ vals['comment'] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+version: "3"
+services:
+  notebook:
+    build: .
+    container_name: ${NAME}
+    volumes:
+     - ".:/home/jovyan/work"
+    ports:
+      - "${PORT:-8888}:8888"

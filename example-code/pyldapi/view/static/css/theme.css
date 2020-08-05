@@ -1,0 +1,57 @@
+/** DEFAULT CSS   **/
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans|Oxygen&display=swap');
+
+h1 {
+   font-family: 'Libre Franklin', sans-serif;
+}
+
+h2, h3, h4, h5 {
+   font-family: 'Oxygen', sans-serif;
+}
+
+
+p, div {
+   font-family: 'Open Sans', sans-serif;
+}
+
+ul.nav {
+   padding-inline-start: 0;
+}
+
+.nav li {
+  display: inline;
+  padding-right: 5px;
+}
+
+.pagination li{
+  display: inline;
+  padding-right: 5px;
+}
+
+
+.alternates td {
+   vertical-align: text-top;
+   text-align: center;
+  padding-bottom: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.alternates th {
+   vertical-align: text-top;
+   text-align: center;
+  padding-bottom: 12px;
+}
+
+
+/*--- Green Box (box-c) ---*/
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
