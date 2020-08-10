@@ -1,14 +1,13 @@
 # Standards for Linked Data and the Semantic Web 
 
 <!-- TOC depthFrom:2 -->
-
 - [W3C semantics stack - references](w3c-semantics-stack---references)
   - [RDF - the Resource Description Framework](#rdf---the-resource-description-framework)
   - [OWL - the Web Ontology Language](#owl---the-web-ontology-language)
   - [SKOS - the Simple Knowledge Organization System](#skos---the-simple-knowledge-organization-system)
   - [SPARQL - the SPARQL RDF Query Language](#sparql---the-sparql-rdf-query-language)
   - [RDF Shapes](#rdf-shapes)
-- [Standard namespaces - RDF vocabularies and ontologies that you can trust](#standard-namespaces---rdf-vocabularies-and-ontologies-that-you-can-trust)
+- [Standard namespaces - RDF vocabularies that you can trust](#standard-namespaces---rdf-vocabularies-and-ontologies-that-you-can-trust)
   - [RDF infrastructure](#rdf-infrastructure)
   - [Descriptive metadata](#descriptive-metadata)
   - [Utility schemas](#utility-schemas)
@@ -19,7 +18,6 @@
   - [Geospatial metadata](#geospatial-metadata)
   - [Other metadata](#other-metadata)
 <!-- /TOC -->
-
 
 ## W3C semantics stack - references
 
@@ -33,21 +31,18 @@
 - [Best Practice Recipes for Publishing RDF Vocabularies](https://www.w3.org/TR/swbp-vocab-pub/) - including '#' vs '/' URI patterns
 
 ### OWL - the Web Ontology Language
-Basic dscription logic
-
+Basic description logic
 - [OWL 2 Web Ontology Language Document Overview](https://www.w3.org/TR/owl2-overview/)
 - [OWL 2 Web Ontology Language Primer](https://www.w3.org/TR/owl2-primer/)
 - [OWL 2 Web Ontology Language Quick Reference Guide](https://www.w3.org/TR/owl2-quick-reference/)
 
 ### SKOS - the Simple Knowledge Organization System
 Collections of terms+definitions organized in a hierarchy
-
 - [SKOS Simple Knowledge Organization System Primer](https://www.w3.org/TR/skos-primer/) 
 - [SKOS Simple Knowledge Organization System Reference](https://www.w3.org/TR/skos-reference/) 
-- [More detail on SKOS](skos.md)
+- [More detail on SKOS](skos-bp.md)
 
 ### SPARQL - the SPARQL RDF Query Language 
-
 - [SPARQL 1.1 Overview](https://www.w3.org/TR/sparql11-overview/)
 - [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
 - [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/)
@@ -55,18 +50,15 @@ Collections of terms+definitions organized in a hierarchy
 
 ### RDF Shapes
 RDF validation 
-
 - [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) 
 - [Shapes Expressions (ShEx)](http://shex.io/shex-primer/)
 
 ## Standard namespaces - RDF vocabularies and ontologies that you can trust
-
 These ontologies and vocabularies of RDF terms are well maintained and widely used, so elements from them can reasonably be adopted in new ontologies. 
 
 Note, however, that they were not all designed as part of a consistent suite, so if it is planned to use them in applications involving _inferencing_ or _reasoning_, then it is wise to check whether axioms or entailments have any clashes or inconsistencies between modules.  
 
 ### RDF infrastructure
-
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [RDF](https://www.w3.org/TR/rdf11-concepts/) | Basic RDF elements | `rdf:` |  http://www.w3.org/1999/02/22-rdf-syntax-ns# 
@@ -76,7 +68,6 @@ vocabulary | scope | prefix | namespace URI
 [SHACL](https://www.w3.org/TR/shacl/) | SHACL elements | `sh:` | http://www.w3.org/ns/shacl# 
  
 ### Descriptive metadata
-
 vocabulary | scope | prefix | namespace URI | resources
 --- | --- | --- | --- | ---
 [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) | General purpose metadata | `dcterms:` `dct:` | http://purl.org/dc/terms/ | 
@@ -91,9 +82,7 @@ vocabulary | scope | prefix | namespace URI | resources
 
 
 ### Utility schemas
-
 #### Space and Time
-
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [GeoSPARQL](https://portal.opengeospatial.org/files/?artifact_id=47664) | geometry & basic topology | `geo:` | http://www.opengis.net/ont/geosparql#
@@ -103,7 +92,6 @@ vocabulary | scope | prefix | namespace URI
 [Temporal relations](https://www.w3.org/TR/vocab-owl-time-rel/) | The missing relationships | `time:` | http://www.w3.org/2006/time# 
 
 #### Organizations and people
-
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Friend of a friend](http://xmlns.com/foaf/spec/) | agents, persons, organizations - the original social-network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
@@ -111,7 +99,6 @@ vocabulary | scope | prefix | namespace URI
 [vcard](https://www.w3.org/TR/vcard-rdf/) | People, organizations, addresses | `vcard:` `v:` | http://www.w3.org/2006/vcard/ns# 
 
 #### Encoding data 
-
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/) | Metadata for observations and samples | `sosa:` <br/> `ssn:` | http://www.w3.org/ns/sosa/ <br/> http://www.w3.org/ns/ssn/ 
@@ -121,7 +108,6 @@ vocabulary | scope | prefix | namespace URI
 [RDF Data Cube](https://www.w3.org/TR/vocab-data-cube/) | Tabular ('rectangular') data, surveys and statistics (SDMX) | `qb:` |   http://purl.org/linked-data/cube#
 
 ## Miscellaneous related non-RDF resources
-
 ### Geospatial metadata 
 - [FGDC](https://www.fgdc.gov/metadata)
 - [ISO 19115](https://en.wikipedia.org/wiki/Geospatial_metadata)
