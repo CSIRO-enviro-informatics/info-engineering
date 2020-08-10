@@ -16,7 +16,7 @@
 ## Preparing and maintaining SKOS vocabularies
 - [Excel2rdf](https://github.com/edmondchuc/excel2rdf)
 - [Excel2ldr](https://csiro-enviro-informatics.github.io/ldrpyutils/index#excel2ldr)
-- [SKOS-play](http://labs.sparna.fr/skos-play/convert) 
+- [SKOS Play!](http://labs.sparna.fr/skos-play/convert) - convert Excel to SKOS
 - [Maintain your SKOS with VocBench](http://vocbench.uniroma2.it/)
 
 ## SKOS/RDF/OWL publishing platforms
@@ -30,7 +30,7 @@
 
 ## SKOS/RDF quality control, remediation, and validation
 - [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
-- [qSKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/login)
+- [SKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/)
 
 ## Full service SKOS/RDF platforms
 - [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/)
