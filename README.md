@@ -24,7 +24,7 @@ The focus on this site is mainly on **semantic web** tools and technologies.
 
 - [Linked Data APIs: theory and practice](linked-data-api.md) - introduction to Linked Data API
 - [Semantic web standards](standards.md) - links to the main standards documents, resources, and namespaces
-- [Registers and controlled-vocabularies](cv.md) - some key linked-data registers, controlled vocabularies, and "a-box" ontologies
+- [Controlled-vocabularies](cv.md) - some key linked-data registers, controlled vocabularies, and "a-box" ontologies
 - [Some useful semantic technologies](semantic-tools.md) - tools and applications for working with semantic resources
 - [International standards context](standards-organizations.md)
 - [Introduction to the Semantic Web Stack](semantic-stack.md)
