@@ -1,4 +1,4 @@
 permalink: /:basename:output_ext
 home_url: https://csiro-enviro-informatics.github.io/info-engineering/
 show_downloads: true 
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
