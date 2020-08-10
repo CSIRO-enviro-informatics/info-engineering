@@ -1,6 +1,8 @@
 # Registers and controlled vocabularies
 
 <!-- TOC depthFrom:2 -->
+- [Background](#background)
+- [Tools and best practices](#tools-and-best-practices)
 - [IANA registers](#iana-registers)
 - [Codelists and controlled vocabularies](#codelists-and-controlled-vocabularies)
   - [General](#general)
@@ -9,6 +11,8 @@
 - [Vocabulary and ontology services](#vocabulary-and-ontology-services)
 - [Miscellaneous lists](#miscellaneous-lists)
 <!-- /TOC -->
+
+## Background 
 
 A large number of standard 'controlled vocabularies' have been developed covering various general requirements as well as specialised technical disciplines. 
 Many are available in forms that are compatible with Linked Data, with a separate persistent URI for every member of the vocabulary. 
@@ -19,7 +23,10 @@ Controlled vocabularies are provided with a variety of expressiveness:
 2. organized as term-definitions in collections and schemes using [SKOS](https://www.w3.org/TR/skos-primer/)
 3. axiomatized with rich descriptions using [OWL2](https://www.w3.org/TR/owl2-primer/) or more rigorous semantics such as [OBO](http://www.obofoundry.org/) 
 
-See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended discussion of best-practices in encoding vocabularies in RDF, primarily SKOS. 
+## Tools and best practices
+- [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
+- [SKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/)
+- [Best practice in formalizing a SKOS vocabulary](skos-bp.md) is an extended discussion of best-practices in encoding vocabularies in RDF, primarily SKOS. 
 
 ## IANA registers
 - [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relationships for web-links in HTTP headers

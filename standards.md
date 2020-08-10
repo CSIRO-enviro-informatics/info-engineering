@@ -40,7 +40,9 @@ Basic description logic
 Collections of terms+definitions organized in a hierarchy
 - [SKOS Simple Knowledge Organization System Primer](https://www.w3.org/TR/skos-primer/) 
 - [SKOS Simple Knowledge Organization System Reference](https://www.w3.org/TR/skos-reference/) 
-- [More detail on SKOS](skos-bp.md)
+- [Best practice in formalizing a SKOS vocabulary](skos-bp.md)
+- [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
+- [SKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/)
 
 ### SPARQL - the SPARQL RDF Query Language 
 - [SPARQL 1.1 Overview](https://www.w3.org/TR/sparql11-overview/)
