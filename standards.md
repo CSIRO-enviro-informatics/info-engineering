@@ -59,6 +59,7 @@ These ontologies and vocabularies of RDF terms are well maintained and widely us
 Note, however, that they were not all designed as part of a consistent suite, so if it is planned to use them in applications involving _inferencing_ or _reasoning_, then it is wise to check whether axioms or entailments have any clashes or inconsistencies between modules.  
 
 ### RDF infrastructure
+
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [RDF](https://www.w3.org/TR/rdf11-concepts/) | Basic RDF elements | `rdf:` |  http://www.w3.org/1999/02/22-rdf-syntax-ns# 
@@ -68,6 +69,7 @@ vocabulary | scope | prefix | namespace URI
 [SHACL](https://www.w3.org/TR/shacl/) | SHACL elements | `sh:` | http://www.w3.org/ns/shacl# 
  
 ### Descriptive metadata
+
 vocabulary | scope | prefix | namespace URI | resources
 --- | --- | --- | --- | ---
 [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) | General purpose metadata | `dcterms:` `dct:` | http://purl.org/dc/terms/ | 
@@ -83,6 +85,7 @@ vocabulary | scope | prefix | namespace URI | resources
 
 ### Utility schemas
 #### Space and Time
+
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [GeoSPARQL](https://portal.opengeospatial.org/files/?artifact_id=47664) | geometry & basic topology | `geo:` | http://www.opengis.net/ont/geosparql#
@@ -92,6 +95,7 @@ vocabulary | scope | prefix | namespace URI
 [Temporal relations](https://www.w3.org/TR/vocab-owl-time-rel/) | The missing relationships | `time:` | http://www.w3.org/2006/time# 
 
 #### Organizations and people
+
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Friend of a friend](http://xmlns.com/foaf/spec/) | agents, persons, organizations - the original social-network ontology | `foaf:` | http://xmlns.com/foaf/0.1/ 
@@ -99,6 +103,7 @@ vocabulary | scope | prefix | namespace URI
 [vcard](https://www.w3.org/TR/vcard-rdf/) | People, organizations, addresses | `vcard:` `v:` | http://www.w3.org/2006/vcard/ns# 
 
 #### Encoding data 
+
 vocabulary | scope | prefix | namespace URI 
 --- | --- | --- | ---
 [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/) | Metadata for observations and samples | `sosa:` <br/> `ssn:` | http://www.w3.org/ns/sosa/ <br/> http://www.w3.org/ns/ssn/ 
