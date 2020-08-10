@@ -3,7 +3,19 @@ permalink: /skos-bp.html
 ---
 
 # Best practice in formalizing a SKOS vocabulary
+_This page was originally developed as part of the [SEEGrid website](https://confluence.csiro.au/display/VOCAB/Best+practice+in+formalizing+a+SKOS+vocabulary)._
+
 Some best practices have been developed that will assist in the preparation of a well-behaved, maintainable vocabulary.
+
+(SKOS) is based on a vocabulary/thesaurus model, and was designed primarily to formalize existing vocabularies using the semantic web tools, and also smooth the transition towards the richer logic-based tools from ontology modeling. The aim of SKOS is to enable pre-existing controlled vocabularies to be consumed on the web and to allow vocabulary creators to publish born-digital vocabularies on the web.  To understand SKOS you have to have a basic understanding of controlled vocabularies (hierarchical relationships, broader and narrower terms where each node has a relationship)
+
+SKOS was built on RDF, and thus SKOS (a data sharing standard for formal logic and structure) data are represented as RDF triples.  This standard expresses data in a manner that is easily amenable to  computation and hence the usefulness. 
+
+- [SKOS Simple Knowledge Organization System Primer](https://www.w3.org/TR/skos-primer/)
+- [SKOS Simple Knowledge Organization System Reference](https://www.w3.org/TR/skos-reference/) 
+- [SKOS Play!](http://labs.sparna.fr/skos-play/convert) - convert Excel to SKOS
+- [SKOS Quality Checker](https://qskos.poolparty.biz/) based on qSKOS
+- [Key choices in the design of Simple Knowledge Organization System (SKOS)](https://doi.org/10.1016/j.websem.2013.05.001) - paper in Journal of Web Semantics
 
 ## Syntax
 
@@ -464,7 +476,6 @@ Different patterns of usage for the extra field can result in few or many differ
 
 ## Complete examples
 
-*   [Geologic Timescale versions](http://resource.geosciml.org/vocabulary/timescale/)
+*   [Geologic Timescale versions](https://github.com/CGI-IUGS/timescale-data)
 *   [ISO 19115 Codelists](http://registry.it.csiro.au/def/isotc211)
 
--- [SimonCox](https://confluence.csiro.au/display/~cox075) - 06 Nov 2012

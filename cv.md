@@ -9,6 +9,7 @@ Controlled vocabularies are provided with a variety of expressiveness:
 2. organized as term-definitions in collections and schemes using [SKOS](https://www.w3.org/TR/skos-primer/)
 3. axiomatized with rich descriptions using [OWL2](https://www.w3.org/TR/owl2-primer/) or more rigorous semantics such as [OBO](http://www.obofoundry.org/) 
 
+See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended discussion of best-practices in encoding vocabularies in RDF, primarily SKOS. 
 
 ## IANA registers
 - [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relationships for web-links in HTTP headers
@@ -16,8 +17,8 @@ Controlled vocabularies are provided with a variety of expressiveness:
 
 ## Codelists and Controlled vocabularies
 ### General
-- [ANZSRC Field of Research classification](https://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E?opendocument)
-  - [FOR as linked-data](https://vocabs.ands.org.au/repository/api/lda/anzsrc-for/concept)
+- [ANZ Standard Research CLassification, 2020](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1297.0Main+Features12020)
+  - [Field of Research as linked-data](https://vocabs.ands.org.au/repository/api/lda/anzsrc-for/concept)
 - [DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7)
 - [Datacite resource types](https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd)
 - [ISO/TC 211 metadata](http://registry.it.csiro.au/def/isotc211) - Codelists from the ISO 19115 metadata standards expressed using SKOS
@@ -27,7 +28,6 @@ Controlled vocabularies are provided with a variety of expressiveness:
 - [re3data subject classification](https://www.re3data.org/browse/by-subject/)
 - [UNESCO THesaurus](https://skos.um.es/unescothes/)
 - [Wikidata](http://www.wikidata.org) - library of concepts published as linked-data 
-- [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (dated)
 
 ### Domain-specific
 - [Environment Ontology (ENVO)](http://environmentontology.org/) - strongly axiomatized environment definitions (OBO Foundry)
@@ -46,7 +46,7 @@ Controlled vocabularies are provided with a variety of expressiveness:
 ### Spatio-temporal 
 - [EPSG Geodetic Parameters](http://www.epsg-registry.org/)
   - [EPSG Dataset](http://www.epsg.org/EPSGDataset/DownloadDataset.aspx)
-  - [epsg.io](Slightly slicker ui and shorter URIs), but incomplete and not authoritative
+  - [epsg.io](http://epsg.io)) Slightly slicker ui and shorter URIs, but incomplete and not authoritative
 - [Geologic timescale](https://vocabs.ands.org.au/viewById/196)
   - [Geologic timescale linked data service](http://resource.geosciml.org/classifier/ics/ischart)
   - [INTERACTIVE INTERNATIONAL CHRONOSTRATIGRAPHIC CHART](https://kurrawong.net/timescale/)
@@ -66,6 +66,7 @@ Controlled vocabularies are provided with a variety of expressiveness:
   - [SeaDataNet cache of NVS vocabularies](http://seadatanet.maris2.nl/v_bodc_vocab_v2/welcome.asp)
 - [Ontobee](http://www.ontobee.org/) - A linked data server for OBO-foundry ontologies
 - [Research Vocabularies Australia](https://vocabs.ands.org.au/)
+- [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (dated)
 
 ## Miscellaneous
 - [Creative Commons licenses](http://creativecommons.org/licenses/)
