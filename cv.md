@@ -1,5 +1,15 @@
 # Registers and controlled vocabularies
 
+<!-- TOC depthFrom:2 -->
+- [IANA registers](#iana-registers)
+- [Codelists and controlled vocabularies](#codelists-and-controlled-vocabularies)
+  - [General](#general)
+  - [Domain specific](#domain-specific)
+  - [Spatio-temporal](#spatio-temporal)
+- [Vocabulary and ontology services](#vocabulary-and-ontology-services)
+- [Miscellaneous lists](#miscellaneous-lists)
+<!-- /TOC -->
+
 A large number of standard 'controlled vocabularies' have been developed covering various general requirements as well as specialised technical disciplines. 
 Many are available in forms that are compatible with Linked Data, with a separate persistent URI for every member of the vocabulary. 
 These allow for hyper-linking from within datasets using a [URI-reference](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URI_references, either as the `rdf:object` in an RDF statement (triple), or as the value of a field in a table or the target of an anchor in other contexts. 
@@ -15,7 +25,7 @@ See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended
 - [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relationships for web-links in HTTP headers
 - [MIME media types](https://www.iana.org/assignments/media-types/media-types.xhtml) - standard file-formats
 
-## Codelists and Controlled vocabularies
+## Codelists and controlled vocabularies
 ### General
 - [ANZ Standard Research CLassification, 2020](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1297.0Main+Features12020)
   - [Field of Research as linked-data](https://vocabs.ands.org.au/repository/api/lda/anzsrc-for/concept)
@@ -27,9 +37,9 @@ See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended
 - [QUDT Units of Measure](http://www.qudt.org/doc/2020/08/DOC_VOCAB-UNITS-ALL-v2.1.html)
 - [re3data subject classification](https://www.re3data.org/browse/by-subject/)
 - [UNESCO THesaurus](https://skos.um.es/unescothes/)
-- [Wikidata](http://www.wikidata.org) - library of concepts published as linked-data 
+- [Wikidata](http://www.wikidata.org) - library of concepts published as linked-data - a useful fall-back where technical vocabularies are not available 
 
-### Domain-specific
+### Domain specific
 - [Environment Ontology (ENVO)](http://environmentontology.org/) - strongly axiomatized environment definitions (OBO Foundry)
 - [GEMET Thesaurus](https://www.eionet.europa.eu/gemet/en/webservices/) - General Multilingual _Environmental Thesaurus_ 
 - [CGI GeoSciML vocabularies](https://geosciml.org/resource/) - a suite of small vocabularies for geological maps
@@ -57,7 +67,7 @@ See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended
 - [ISO Geodetic Registry](https://geodetic.isotc211.org/) - coordinate reference systems, datums, etc
 - [Location Index](http://loci.cat/) - interlinked Australian geographies
 
-## Vocabulary/ontology services
+## Vocabulary and ontology services
 - [ESIP Community Ontology Repository](http://cor.esipfed.org/ont/#/) 
 - [Linked open vocabularies (LOV)](https://lov.linkeddata.es/) - index of ontologies
 - [NERC Vocabulary Server](https://www.bodc.ac.uk/resources/products/web_services/vocab/)
@@ -68,7 +78,7 @@ See [Best practice in formalizing a SKOS vocabulary](skos-bp.md) for an extended
 - [Research Vocabularies Australia](https://vocabs.ands.org.au/)
 - [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (dated)
 
-## Miscellaneous
+## Miscellaneous lists
 - [Creative Commons licenses](http://creativecommons.org/licenses/)
 - [Virtual International Authority File (VIAF)](http://viaf.org/) - authors and creators
 - [Open Researcher and Contributor ID (ORCID)](http://orcid.org/) - research authors
