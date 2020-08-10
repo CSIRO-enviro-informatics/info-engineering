@@ -40,10 +40,10 @@ This section outlines theoretical aspects of Linked Data API design, rationale a
 The term Linked Data refers to a set of practices for publishing structured data on the Web. 
 These principles were described by Tim Berners-Lee in the design issue note [Linked Data](https://www.w3.org/wiki/LinkedData). The principles are:
 
-1. Use URIs as names for things
-2. Use HTTP URIs so that people can look up those names.
+1. Use URIs as names (identifiers) for everything
+2. Make these HTTP URIs so that people can look them up.
 3. When someone looks up a URI, provide useful information.
-4. Include links to other URIs. so that they can discover more things.
+4. Include links to other things, using their URIs, so that readers can discover more things.
  
 > The idea behind these principles is on the one hand side, to use standards for the representation and the access to data on the Web. On the other hand, the principles propagate to set hyperlinks between data from different sources. These hyperlinks connect all Linked Data into a single global data graph, similar as the hyperlinks on the classic Web connect all HTML documents into a single global information space. Thus, LinkedData is to spreadsheets and databases what the Web of hypertext documents is to word processor files. The Linked Open Data cloud diagramms give an overview of the linked data sets that are available on the Web.
 
@@ -124,11 +124,17 @@ The RDF statements in each of these examples is the same, but encoded or *serial
 
 The last thing to note about the above examples is the use of *namespaces*. Each *namespace* denotes a "vocabulary" which is a set of RDF terms. A prefix can be associated with a namespace which allows a URI from that namespace to be aliased to a more compact "colonised" form - e.g. `foaf:Person` &Implies; `<http://xmlns.com/foaf/0.1/Person>`. 
 
-There are many existing vocabularies published by W3C, DCMI, the OBO foundation, OGC, and various other initiatives including the Australian Government through AGLDWG. 
-A selection of vocabularies recommended for re-use are listed in [RDF vocabularies you can trust](trusted-rdf-vocabs). 
-As a general principle, if your application re-uses properties and types from well-known vocabularies then this enables greater data integration opportunities and the use of common tools to parse/render the data. For example, `FOAF` (or Friend-of-a-Friend) is a namespace with properties and types for describing people. It is used in the above example to express that B.B. King is a person. Use of FOAF allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/), [`dcterms:`](http://purl.org/dc/terms/). Domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains include [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment.
+There are many existing vocabularies and ontologies published by W3C, DCMI, the OBO foundation, OGC, and various other initiatives including the Australian Government through AGLDWG. 
+A selection of that are recommended for re-use are listed in [RDF vocabularies you can trust](trusted-rdf-vocabs). 
+As a general principle, if your application re-uses properties and types from well-known vocabularies then this enables greater data integration opportunities and the use of common tools to parse/render the data. For example, `FOAF` (or Friend-of-a-Friend) is a namespace with properties and types for describing people. It is used in the above example to express that B.B. King is a person. Use of FOAF allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/), [`dcterms:`](http://purl.org/dc/terms/). 
 
 Refer to *Section 1* of the "Linked Data Example 1.ipynb" Jupyter Notebook example.
+
+#### Domain definitions 
+
+Domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains include [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment. [CGI GeoSciML](https://geosciml.org/resource/) provides a suite of small vocabularies for geology in a set of namespaces such as [`lithology:`](http://resource.geosciml.org/classifier/cgi/lithology) and [`faulttype:`](http://resource.geosciml.org/classifier/cgi/faulttype) with a common stem http://resource.geosciml.org/classifier/cgi/.
+
+Finally, [Wikidata](https://www.wikidata.org/) provides concept descriptions provided as linked-data (i.e. each item with a persistent URI, and available in multiple forms). For example the concept 'Guitar' is denoted http://www.wikidata.org/entity/Q6607. While these are not maintained by specialist domain communities, they provide a useful fall-back where more technical vocabularies are not available. 
 
 ### "Conneg" (Content-negotiation)
 

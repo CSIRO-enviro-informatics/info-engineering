@@ -6,6 +6,7 @@
 - Protege - for **OWL ontologies**
   - [Protégé Desktop](https://protege.stanford.edu/products.php#desktop-protege)
   - [WebProtégé](https://webprotege.stanford.edu/)
+- [JSON-LD Playground](https://json-ld.org/playground/) 
 
 ## SPARQL & SHACL testing
 - [YASGUI](http://yasgui.triply.cc/) - a SPARQL query editor and tester

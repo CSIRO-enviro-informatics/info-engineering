@@ -1,6 +1,6 @@
-# RDF vocabularies you can trust
+# RDF vocabularies and ontologies that you can trust
 
-These vocabularies are well maintained and widely used, so elements from them can reasonably be adopted in new ontologies. 
+These ontologies and vocabularies of RDF terms are well maintained and widely used, so elements from them can reasonably be adopted in new ontologies. 
 
 Note, however, that they were not all designed as part of a consistent suite, so if it is planned to use them in applications involving _inferencing_ or _reasoning_, then it is wise to check whether axioms or entailments have any clashes or inconsistencies between modules.  
 

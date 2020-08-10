@@ -23,6 +23,7 @@ The focus on this site is mainly on **semantic web** tools and technologies.
 ## Resources
 
 - [Introduction to the Semantic Web Stack](semantic-stack.md)
+- [Linked Data APIs: theory and practice](linked-data-api.md) - introduction to Linked Data API
 - [Semantic web standards](standards.md) - links to the main standards documents and resources
 - [Some key semantic technologies](semantic-tools.md) - tools and applications for working with semantic resources
 - [RDF vocabularies you can trust](trusted-rdf-vocabs.md) - starting points for re-use
