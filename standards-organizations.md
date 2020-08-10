@@ -1,6 +1,6 @@
 # International standards context
 
-Organization | Abbreviation/Acronym | Scope | comments
+Organization | Acronym | Scope | comments
 --- | --- | --- | ---
 [IUGS Commission for Geoscience Information](http://www.cgi-iugs.org/) | CGI | geoscience information standards and best practice | Supported primarily by a set of national geological surveys (GSC, BGS, BRGM, GA, ...) Responsible for [GeoSciML](http://www.geosciml.org/)
 [ISC Committee on Data](https://codata.org/) | CODATA |  global collaboration to advance Open Science and to improve the availability and usability of data for all areas of research | aligned with [International Science Council](https://council.science/) and [Go-FAIR](https://www.go-fair.org/)
