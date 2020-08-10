@@ -14,6 +14,8 @@
 - [re3data subject classification](https://www.re3data.org/browse/by-subject/)
 - [UNESCO THesaurus](https://skos.um.es/unescothes/)
 - [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (dated)
+- [Wikidata](http://www.wikidata.org) - library of concepts published as linked-data 
+
 ### Domain-specific
 - [GEMET Thesaurus](https://www.eionet.europa.eu/gemet/en/webservices/) - General Multilingual _Environmental Thesaurus_ 
 - [GSQ vocabularies](https://github.com/geological-survey-of-queensland/vocabularies/tree/master/vocabularies) - Geology, resources
@@ -24,6 +26,7 @@
   - [Metadata vocabulary](http://vocabs.ceh.ac.uk/edg/tbl/cehmd.editor)
   - [Topic classification](http://vocabs.ceh.ac.uk/edg/tbl/cehmd.editor#http%3A%2F%2Fonto.nerc.ac.uk%2FCEHMD%2Ftopic)
   - [_EnvThes_ Environment thesaurus](http://vocabs.ceh.ac.uk/edg/tbl/EnvThes.editor) 
+  
 ### Spatio-temporal 
 - [ISO Geodetic Registry](https://geodetic.isotc211.org/) - coordinate reference systems, datums, etc
 - [EPSG Geodetic Parameters](http://www.epsg-registry.org/)
