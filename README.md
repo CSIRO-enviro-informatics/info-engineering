@@ -28,6 +28,4 @@ The focus on this site is mainly on **semantic web** tools and technologies.
 - [Some useful semantic technologies](semantic-tools.md) - tools and applications for working with semantic resources
 - [International standards context](standards-organizations.md)
 - [Introduction to the Semantic Web Stack](semantic-stack.md)
-- [Introductory presentations](presentations.md) - links to presentations used in this course
 - [Learning resources](learning-resources.md) - links to external presentations, videos, and readings
-

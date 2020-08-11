@@ -52,7 +52,7 @@ This allows both human-readable and machine-readable content/interaction to acce
 descriptive metadata simply by dereferencing HTTP URIs. 
 
 ### Elements of RDF
-Links to the basic references given in [W3C semantics stack - references](standards.md#w3c-semantics-stack---references).
+Links to the basic references are given in [W3C semantics stack - references](standards.md#w3c-semantics-stack---references).
 
 #### RDF Statements or Triples
 The _Resource Description Framework (RDF)_ is a W3C standard (Hayes and Patel-Schneider 2014).  Information elements consist of RDF statements. An RDF statement consist of three parts: _Subject_, _Predicate_, and _Object_. This is called a _triple_.
