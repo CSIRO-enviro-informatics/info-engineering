@@ -7,7 +7,7 @@
   - [Space and Time](#space-and-time)
   - [Organizations and people](#organizations-and-people)
   - [Encoding data](#encoding-data)
-- [W3C semantics stack - references](w3c-semantics-stack---references)
+- [W3C semantics stack - references](#w3c-semantics-stack---references)
   - [RDF - the Resource Description Framework](#rdf---the-resource-description-framework)
   - [OWL - the Web Ontology Language](#owl---the-web-ontology-language)
   - [SKOS - the Simple Knowledge Organization System](#skos---the-simple-knowledge-organization-system)

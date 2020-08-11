@@ -63,7 +63,7 @@ Controlled vocabularies are provided with a variety of expressiveness:
 ### Spatio-temporal 
 - [EPSG Geodetic Parameters](http://www.epsg-registry.org/)
   - [EPSG Dataset](http://www.epsg.org/EPSGDataset/DownloadDataset.aspx)
-  - [epsg.io](http://epsg.io)) Slightly slicker ui and shorter URIs, but incomplete and not authoritative
+  - [epsg.io](http://epsg.io) Slightly slicker ui and shorter URIs, but incomplete and not authoritative
 - [Geologic timescale](https://vocabs.ands.org.au/viewById/196)
   - [Geologic timescale linked data service](http://resource.geosciml.org/classifier/ics/ischart)
   - [INTERACTIVE INTERNATIONAL CHRONOSTRATIGRAPHIC CHART](https://kurrawong.net/timescale/)
@@ -83,11 +83,10 @@ Controlled vocabularies are provided with a variety of expressiveness:
   - [SeaDataNet cache of NVS vocabularies](http://seadatanet.maris2.nl/v_bodc_vocab_v2/welcome.asp)
 - [Ontobee](http://www.ontobee.org/) - A linked data server for OBO-foundry ontologies
 - [Research Vocabularies Australia](https://vocabs.ands.org.au/)
-- [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (dated)
+- [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (unmaintained)
 
 ## Miscellaneous lists
 - [Creative Commons licenses](http://creativecommons.org/licenses/)
 - [Virtual International Authority File (VIAF)](http://viaf.org/) - authors and creators
 - [Open Researcher and Contributor ID (ORCID)](http://orcid.org/) - research authors
 - [Research Organization Registry](https://ror.org/)
-
