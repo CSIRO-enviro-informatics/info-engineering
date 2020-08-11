@@ -4,9 +4,9 @@
 
 | Timing | Content |
 | ------ | ------- |
-|45 mins | Lecture: Introduction to Semantic Web Stack |
+|45 mins | Lecture: Introduction to RDF and OWL |
 |15 mins | Break|
-|45 mins | Tutorial: Semantic Web Stack (hands on introduction to using an RDF Editor IDE to navigate and annotate RDF models)|
+|45 mins | Tutorial: Intro to RDF and OWL (hands on introduction to using an RDF Editor IDE to navigate and annotate RDF models)|
 |45 mins | Lunch|
 |30 mins|  Lecture: Intro to Linked Data APIs Part 1 |
 |15 mins|  Break|
@@ -19,7 +19,7 @@
 | ------ | ------- |
 |45 mins | Lecture:  Controlled vocabularies on the Semantic Web |
 |15 mins | Break|
-|45 mins | Tutorial: Controlled vocabularies on the Semantic Web (hands on uing an RDF Editor IDE to define/extend a SKOS vocabulary)|
+|45 mins | Tutorial: Controlled vocabularies on the Semantic Web (hands on using an RDF Editor IDE to define/extend a SKOS vocabulary)|
 |45 mins | Lunch|
 |30 mins | Lecture: Intro to Linked Data APIs Part 2|
 |15 mins | Break|
