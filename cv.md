@@ -2,14 +2,14 @@
 
 <!-- TOC depthFrom:2 -->
 - [Background](#background)
-- [Tools and best practices](#tools-and-best-practices)
-- [IANA registers](#iana-registers)
 - [Codelists and controlled vocabularies](#codelists-and-controlled-vocabularies)
   - [General](#general)
   - [Domain specific](#domain-specific)
   - [Spatio-temporal](#spatio-temporal)
 - [Vocabulary and ontology services](#vocabulary-and-ontology-services)
+- [IANA registers](#iana-registers)
 - [Miscellaneous lists](#miscellaneous-lists)
+- [Tools and best practices](#tools-and-best-practices)
 <!-- /TOC -->
 
 ## Background 
@@ -23,18 +23,9 @@ Controlled vocabularies are provided with a variety of expressiveness:
 2. organized as term-definitions in collections and schemes using [SKOS](https://www.w3.org/TR/skos-primer/)
 3. axiomatized with rich descriptions using [OWL2](https://www.w3.org/TR/owl2-primer/) or more rigorous semantics such as [OBO](http://www.obofoundry.org/) 
 
-## Tools and best practices
-- [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
-- [SKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/)
-- [Best practice in formalizing a SKOS vocabulary](skos-bp.md) is an extended discussion of best-practices in encoding vocabularies in RDF, primarily SKOS. 
-
-## IANA registers
-- [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relationships for web-links in HTTP headers
-- [MIME media types](https://www.iana.org/assignments/media-types/media-types.xhtml) - standard file-formats
-
 ## Codelists and controlled vocabularies
 ### General
-- [ANZ Standard Research CLassification, 2020](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1297.0Main+Features12020)
+- [ANZ Standard Research Classification, 2020](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1297.0Main+Features12020)
   - [Field of Research as linked-data](https://vocabs.ands.org.au/repository/api/lda/anzsrc-for/concept)
 - [DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7)
 - [Datacite resource types](https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd)
@@ -85,8 +76,18 @@ Controlled vocabularies are provided with a variety of expressiveness:
 - [Research Vocabularies Australia](https://vocabs.ands.org.au/)
 - [Compendium of vocabularies](https://confluence.csiro.au/display/VOCAB/Compendium+of+vocabularies) - (unmaintained)
 
+## IANA registers
+- [Link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) - standard relationships for web-links in HTTP headers
+- [MIME media types](https://www.iana.org/assignments/media-types/media-types.xhtml) - standard file-formats
+
 ## Miscellaneous lists
 - [Creative Commons licenses](http://creativecommons.org/licenses/)
 - [Virtual International Authority File (VIAF)](http://viaf.org/) - authors and creators
 - [Open Researcher and Contributor ID (ORCID)](http://orcid.org/) - research authors
 - [Research Organization Registry](https://ror.org/)
+
+## Tools and best practices
+- [Clean your SKOS with Skosify](https://github.com/NatLibFi/Skosify/)
+- [SKOS quality control](https://github.com/cmader/qSKOS/) - [qSKOS service](https://qskos.poolparty.biz/)
+- [Best practice in formalizing a SKOS vocabulary](skos-bp.md) is an extended discussion of best-practices in encoding vocabularies in RDF, primarily SKOS. 
+
