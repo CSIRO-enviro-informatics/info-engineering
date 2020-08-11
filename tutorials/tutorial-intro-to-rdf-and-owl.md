@@ -74,10 +74,13 @@ Enter in the Pizza ontology URL (see above) into the text input box like so:
 The imported Pizza ontology will appear in the Imports tab like so:
 ![Import the Pizza ontology from url](img/tbc-import-tab-pizza-imported.png)
 
-
-Take a few moments to navigate around the Pizza ontology
-
 For discussion: 
+* Take a few moments to navigate around the Pizza ontology
+* What do you notice about the Margherita Pizza definition?
+
+Extra exercises:
+* Create a new class called `AussiePizza` by extending the framework in the imported pizza ontology
+
 
 
 ## Part 3. Query the RDF data using SPARQL in Topbraid (15-20mins)
@@ -149,6 +152,16 @@ WHERE {
    ?x rdfs:subClassOf+ pizza:Pizza
 }
 ```
+
+3.3. Find all Pizza classes that have `TomatoTopping` 
+```
+SELECT ?x 
+WHERE {
+   ?x rdfs:subClassOf+ pizza:Pizza
+}
+```
+
+3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
 
 
 ### Going deeper
