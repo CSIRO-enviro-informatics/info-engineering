@@ -22,7 +22,7 @@ In this tutorial, we will learn to:
       - [Extra exercise](#extra-exercise)
   - [Part 2. Import an existing ontology into the Topbraid editor (15-20mins)](#part-2-import-an-existing-ontology-into-the-topbraid-editor-15-20mins)
     - [Exercise 2. Import the Pizza ontology and explore its features](#exercise-2-import-the-pizza-ontology-and-explore-its-features)
-      - [2.1. Import the Pizza ontology from this URL:](#21-import-the-pizza-ontology-from-this-url)
+      - [2.1. Import the Pizza ontology :](#21-import-the-pizza-ontology-)
       - [For discussion:](#for-discussion)
       - [Extra exercise](#extra-exercise-1)
   - [Part 3. Query the RDF data using SPARQL in Topbraid (15-20mins)](#part-3-query-the-rdf-data-using-sparql-in-topbraid-15-20mins)
@@ -33,6 +33,7 @@ In this tutorial, we will learn to:
       - [3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)](#32-query-the-pizza-ontology-and-list-all-subclasses-of-pizzapizza-direct-and-indirect)
       - [3.3. Find all Pizza classes that have `TomatoTopping`](#33-find-all-pizza-classes-that-have-tomatotopping)
       - [3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`](#34-try-to-create-a-sparql-query-to-find-pizzas-that-has-a-garlictopping)
+      - [3.5. (Advanced) Find all Pizza classes that have `TomatoTopping` and all types of classes of `FishTopping`](#35-advanced-find-all-pizza-classes-that-have-tomatotopping-and-all-types-of-classes-of-fishtopping)
     - [Going deeper](#going-deeper)
   - [References](#references)
 
@@ -104,7 +105,7 @@ We now want to add more semantics to the `MargheritaPizza` class to express that
 
 To understand *Class Restrictions*, it's useful to think about it in terms of a Venn diagram. See below:
 
-![Pizza topping class restriction example](img/pizza-class-restrictions-ex1.png)
+![Pizza topping class restriction example](img/pizza-class-restrictions-ex1.PNG)
 
 In OWL, we use Description Logic to capture class semantics. We use class restrictions to narrow down the possible logical statements about that class. Using the MargheritaPizza example, we know that it is a pizza that has cheese and tomato toppings. To express this, we create a restriction on the subClassOf property for MargheritaPizza with the following:
 * There exists a class where the `hasTopping` property is `CheeseTopping`
@@ -141,8 +142,13 @@ Often you won't be creating an ontology from scratch, but rather importing this 
 
 ### Exercise 2. Import the Pizza ontology and explore its features
 
-#### 2.1. Import the Pizza ontology from this URL:
-https://protege.stanford.edu/ontologies/pizza/pizza.owl
+In the current project, create a new RDF file, called "pizza"
+
+
+#### 2.1. Import the Pizza ontology :
+
+In your new RDF 'pizza' file, import the Pizza ontology from this URL:
+[https://protege.stanford.edu/ontologies/pizza/pizza.owl](https://protege.stanford.edu/ontologies/pizza/pizza.owl)
 
 To import the Pizza ontology, navigate to the `Imports` tab and click on the "`Import from URL`" button.
 ![Import the Pizza ontology from url](img/tbc-import-pizza-steps.PNG)
@@ -218,6 +224,11 @@ In the example above, rows with columns of `?subject1` `?subject2` will be retur
 
 ### Exercise 3: Querying the Pizza ontology using SPARQL
 
+Using the imported Pizza ontology from Part 2, select the `SPARQL` tab like so:
+![SPARQL Tab](img/tbc-sparql-tab.png)
+
+Use the queries below to get hands-on with SPARQL SELECT queries with the Pizza ontology.
+
 #### 3.1. Query the Pizza ontology and list the direct subclasses of `pizza:Pizza`
 ```
 SELECT ?x 
@@ -226,6 +237,9 @@ WHERE {
 }
 ```
 
+Discuss: What's happening here?
+
+
 #### 3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)
 ```
 SELECT ?x 
@@ -233,20 +247,51 @@ WHERE {
    ?x rdfs:subClassOf+ pizza:Pizza
 }
 ```
+Discuss: What's happening here?
 
 #### 3.3. Find all Pizza classes that have `TomatoTopping` 
 ```
 SELECT ?x 
 WHERE {
-   ?x rdfs:subClassOf+ pizza:Pizza
+   ?x rdfs:subClassOf+ pizza:Pizza .
+   ?x rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty pizza:hasTopping; 
+        owl:someValuesFrom pizza:TomatoTopping 
+	]
 }
 ```
+Discuss: What's happening here?
 
 #### 3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
 
 ```
 
 ```
+
+#### 3.5. (Advanced) Find all Pizza classes that have `TomatoTopping` and all types of classes of `FishTopping`
+```
+SELECT ?x 
+WHERE {
+   ?x rdfs:subClassOf+ pizza:Pizza .
+   ?x rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty pizza:hasTopping; 
+        owl:someValuesFrom pizza:TomatoTopping 
+	] .
+	  ?x rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty pizza:hasTopping; 
+        owl:someValuesFrom ?fishClasses
+	] .
+    ?fishClasses rdfs:subClassOf+ pizza:FishTopping 
+}
+```
+
+Discuss: What's happening here?
+
+
+
 ### Going deeper
 
 If you would like to explore more about SPARQL, we'd recommend the following tutorial: 
