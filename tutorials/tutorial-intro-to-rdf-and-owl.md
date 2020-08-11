@@ -163,21 +163,15 @@ WHERE {
 
 3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
 
+```
 
+```
 ### Going deeper
 
-If you would like to explore more about SPARQL, we'd recommend the following tutorial: https://jena.apache.org/tutorials/sparql.html
+If you would like to explore more about SPARQL, we'd recommend the following tutorial: 
+[SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
 
 ## References
 
 SPARQL
-* https://www.w3.org/TR/rdf-sparql-query/ 
-
-
-
-CONSTRUCT {
-  ?thing skos:narrower ?otherthing
-}
-WHERE {
-    ?otherthing skos:broader ?thing .
-}
+* [W3C SPARQL Specification](https://www.w3.org/TR/rdf-sparql-query/)
