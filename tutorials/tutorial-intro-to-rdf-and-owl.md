@@ -8,6 +8,36 @@ In this tutorial, we will learn to:
 2. Import an ontology into the Topbraid editor
 3. Begin querying data using RDF and OWL
 
+<!-- TOC -->
+
+- [Tutorial: Introduction to RDF and OWL](#tutorial-introduction-to-rdf-and-owl)
+  - [Learning Objectives](#learning-objectives)
+  - [Pre-requisites and assumptions](#pre-requisites-and-assumptions)
+  - [Part 1. Creating a simple Pizza ontology using RDF and OWL (15-20mins)](#part-1-creating-a-simple-pizza-ontology-using-rdf-and-owl-15-20mins)
+    - [Exercise 1. Building your simple Pizza ontology](#exercise-1-building-your-simple-pizza-ontology)
+      - [1.1. Create your first class: Pizza class](#11-create-your-first-class-pizza-class)
+      - [1.2. Create more  classes](#12-create-more-classes)
+      - [1.3. Create hasTopping object property Pizza subclasses](#13-create-hastopping-object-property-pizza-subclasses)
+      - [1.4. Create the `MargheritaPizza` class](#14-create-the-margheritapizza-class)
+      - [Extra exercise](#extra-exercise)
+  - [Part 2. Import an existing ontology into the Topbraid editor (15-20mins)](#part-2-import-an-existing-ontology-into-the-topbraid-editor-15-20mins)
+    - [Exercise 2. Import the Pizza ontology and explore its features](#exercise-2-import-the-pizza-ontology-and-explore-its-features)
+      - [2.1. Import the Pizza ontology from this URL:](#21-import-the-pizza-ontology-from-this-url)
+      - [For discussion:](#for-discussion)
+      - [Extra exercise](#extra-exercise-1)
+  - [Part 3. Query the RDF data using SPARQL in Topbraid (15-20mins)](#part-3-query-the-rdf-data-using-sparql-in-topbraid-15-20mins)
+    - [Introducing SPARQL](#introducing-sparql)
+      - [Anatomy of a SPARQL SELECT query](#anatomy-of-a-sparql-select-query)
+    - [Exercise 3: Querying the Pizza ontology using SPARQL](#exercise-3-querying-the-pizza-ontology-using-sparql)
+      - [3.1. Query the Pizza ontology and list the direct subclasses of `pizza:Pizza`](#31-query-the-pizza-ontology-and-list-the-direct-subclasses-of-pizzapizza)
+      - [3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)](#32-query-the-pizza-ontology-and-list-all-subclasses-of-pizzapizza-direct-and-indirect)
+      - [3.3. Find all Pizza classes that have `TomatoTopping`](#33-find-all-pizza-classes-that-have-tomatotopping)
+      - [3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`](#34-try-to-create-a-sparql-query-to-find-pizzas-that-has-a-garlictopping)
+    - [Going deeper](#going-deeper)
+  - [References](#references)
+
+<!-- /TOC -->
+
 ## Learning Objectives
 
 Attendees will:
@@ -33,9 +63,9 @@ The figure below shows a suggested information model for a simple Pizza ontology
 ![Simple pizza model](img/pizza-model.PNG)
 
 
-### Exercise 1. 
+### Exercise 1. Building your simple Pizza ontology
 
-1.1. Create your first class: Pizza class 
+#### 1.1. Create your first class: Pizza class 
 
 Fire up Topbraid Composer. We'll be creating:
 * A new project, called "Pizza"
@@ -45,7 +75,7 @@ In your new RDF 'mypizza' file, create a new class.
 
 ![Create subclass button](img/tbc-class-panel-1.png)
 
-1.2. Create more  classes
+#### 1.2. Create more  classes
 
 Create a sibling class called `PizzaTopping` and the remaining topping subclasses, 
 e.g. CheeseTopping, HamTopping, TomatoTopping, EggTopping
@@ -56,7 +86,7 @@ It should look like this:
 
 ![Pizza and PizzaTopping classes](img/tbc-create-sibling-pizza-classes.png)
 
-1.3. Create hasTopping object property Pizza subclasses
+#### 1.3. Create hasTopping object property Pizza subclasses
 
 ![Create property button](img/tbc-create-property-button.png)
 
@@ -66,7 +96,7 @@ Add the name of the property in the text field, i.e. hasTopping.
 
 This creates an OWL Object Property which can be used to relate two classes
 
-1.4. Create the `MargheritaPizza` class
+#### 1.4. Create the `MargheritaPizza` class
 
 Create a new subclass of the `Pizza` class as you did earlier with the other classes.
 
@@ -98,8 +128,9 @@ Click on the "+" button in the "Filler" field and select "CheeseTopping".
 Repeat for "TomatoTopping".
 
 
-Extra exercise:
-* Create a new class called `AussiePizza` and create subClassOf restrictions of `hasTopping` with `CheeseTopping`, `TomatoTopping`, `EggTopping` and `HamTopping`
+#### Extra exercise
+
+Create a new class called `AussiePizza` and create subClassOf restrictions of `hasTopping` with `CheeseTopping`, `TomatoTopping`, `EggTopping` and `HamTopping`
 
 
 
@@ -110,7 +141,7 @@ Often you won't be creating an ontology from scratch, but rather importing this 
 
 ### Exercise 2. Import the Pizza ontology and explore its features
 
-2.1. Import the Pizza ontology from this URL:
+#### 2.1. Import the Pizza ontology from this URL:
 https://protege.stanford.edu/ontologies/pizza/pizza.owl
 
 To import the Pizza ontology, navigate to the `Imports` tab and click on the "`Import from URL`" button.
@@ -123,12 +154,13 @@ Enter in the Pizza ontology URL (see above) into the text input box like so:
 The imported Pizza ontology will appear in the Imports tab like so:
 ![Import the Pizza ontology from url](img/tbc-import-tab-pizza-imported.PNG)
 
-For discussion: 
+#### For discussion: 
 * Take a few moments to navigate around the Pizza ontology
 * What do you notice about the Margherita Pizza definition?
 
-Extra exercises:
-* Create a new class called `AussiePizza` by extending the framework in the imported pizza ontology
+#### Extra exercise
+
+Create a new class called `AussiePizza` by extending the framework in the imported pizza ontology
 
 
 
@@ -184,9 +216,9 @@ In the example above, rows with columns of `?subject1` `?subject2` will be retur
 -------------------------
 ```
 
-### Exercise: Querying the Pizza ontology using SPARQL
+### Exercise 3: Querying the Pizza ontology using SPARQL
 
-3.1. Query the Pizza ontology and list the direct subclasses of `pizza:Pizza`
+#### 3.1. Query the Pizza ontology and list the direct subclasses of `pizza:Pizza`
 ```
 SELECT ?x 
 WHERE {
@@ -194,7 +226,7 @@ WHERE {
 }
 ```
 
-3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)
+#### 3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)
 ```
 SELECT ?x 
 WHERE {
@@ -202,7 +234,7 @@ WHERE {
 }
 ```
 
-3.3. Find all Pizza classes that have `TomatoTopping` 
+#### 3.3. Find all Pizza classes that have `TomatoTopping` 
 ```
 SELECT ?x 
 WHERE {
@@ -210,7 +242,7 @@ WHERE {
 }
 ```
 
-3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
+#### 3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
 
 ```
 
