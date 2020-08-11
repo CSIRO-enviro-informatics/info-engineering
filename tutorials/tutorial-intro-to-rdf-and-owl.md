@@ -47,10 +47,59 @@ In your new RDF 'mypizza' file, create a new class.
 
 1.2. Create more  classes
 
-Create a sibling classes called `PizzaTopping` and various topping subclasses, 
-e.g. MozzarellaCheeseTopping
+Create a sibling class called `PizzaTopping` and the remaining topping subclasses, 
+e.g. CheeseTopping, HamTopping, TomatoTopping, EggTopping
 
 ![Create sibling class button](img/tbc-class-panel-2.png)
+
+It should look like this:
+
+![Pizza and PizzaTopping classes](img/tbc-create-sibling-pizza-classes.png)
+
+1.3. Create hasTopping object property Pizza subclasses
+
+![Create property button](img/tbc-create-property-button.png)
+
+Select `owl:ObjectProperty` in the in the `Create property` panel.
+Add the name of the property in the text field, i.e. hasTopping.
+![Create property panel](img/tbc-create-property-panel.png)
+
+This creates an OWL Object Property which can be used to relate two classes
+
+1.4. Create the `MargheritaPizza` class
+
+Create a new subclass of the `Pizza` class as you did earlier with the other classes.
+
+We now want to add more semantics to the `MargheritaPizza` class to express that it has a relationship with the `TomatoTopping` and the `CheeseTopping`. To do so, we need to introduce the idea of a *Class Restriction*.
+
+To understand *Class Restrictions*, it's useful to think about it in terms of a Venn diagram. See below:
+
+![Pizza topping class restriction example](img/pizza-class-restrictions-ex1.png)
+
+In OWL, we use Description Logic to capture class semantics. We use class restrictions to narrow down the possible logical statements about that class. Using the MargheritaPizza example, we know that it is a pizza that has cheese and tomato toppings. To express this, we create a restriction on the subClassOf property for MargheritaPizza with the following:
+* There exists a class where the `hasTopping` property is `CheeseTopping`
+* There exists a class where the `hasTopping` property is `TomatoTopping`
+
+The other example in the diagram show that, the `BiancaPizza` is a pizza that has CheeseTopping but no TomatoTopping, and we can express that using subClassOf restrictions. 
+
+Therefore, we can use software reasoners to infer a list of pizzas which has no TomatoToppings, which would include the BiancaPizza. Similarly, we can use software reasoners to infer a list of pizzas which has CheeseToppings, which would include the BiancaPizza, AussiePizza and the MargheritaPizza.
+
+To create a subClassOf restriction, click on the dropdown button on the `rdfs:subClassOf` field, and select "Create restriction".
+
+![Create MargheritaPizza Topping](img/tbc-create-margherita-pizza-restriction-1.png)
+
+Select the "hasTopping" property, and the "someValuesFrom" Restriction Type.
+![Create MargheritaPizza Topping](img/tbc-create-margherita-pizza-restriction-2.png)
+
+We now need to specify the PizzaTopping classes for MargheritaPizza. 
+
+Click on the "+" button in the "Filler" field and select "CheeseTopping".
+
+Repeat for "TomatoTopping".
+
+
+Extra exercise:
+* Create a new class called `AussiePizza` and create subClassOf restrictions of `hasTopping` with `CheeseTopping`, `TomatoTopping`, `EggTopping` and `HamTopping`
 
 
 
@@ -173,5 +222,9 @@ If you would like to explore more about SPARQL, we'd recommend the following tut
 
 ## References
 
-SPARQL
-* [W3C SPARQL Specification](https://www.w3.org/TR/rdf-sparql-query/)
+Check out the [Learning resources](../learning-resources.md) section for more material.
+
+Other related pages:
+* SPARQL
+  * [W3C SPARQL Specification](https://www.w3.org/TR/rdf-sparql-query/)
+  * 
