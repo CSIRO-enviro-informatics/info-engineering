@@ -23,7 +23,6 @@
 
 ## Purpose
 
-
 1. Introduce Linked Data concepts
 2. Introduce Linked Data APIs
 3. Understand Linked Data API implementations and different implementation styles (via links and examples)
@@ -34,16 +33,15 @@
 
 This section outlines theoretical aspects of Linked Data API design, rationale and related background.
 
-
 ### Linked Data
 
 The term Linked Data refers to a set of practices for publishing structured data on the Web. 
 These principles were described by Tim Berners-Lee in the design issue note [Linked Data](https://www.w3.org/wiki/LinkedData). The principles are:
 
-1. Use URIs as names for things
-2. Use HTTP URIs so that people can look up those names.
+1. Use URIs as names (identifiers) for everything
+2. Make these HTTP URIs so that people can look them up.
 3. When someone looks up a URI, provide useful information.
-4. Include links to other URIs. so that they can discover more things.
+4. Include links to other things, using their URIs, so that readers can discover more things.
  
 > The idea behind these principles is on the one hand side, to use standards for the representation and the access to data on the Web. On the other hand, the principles propagate to set hyperlinks between data from different sources. These hyperlinks connect all Linked Data into a single global data graph, similar as the hyperlinks on the classic Web connect all HTML documents into a single global information space. Thus, LinkedData is to spreadsheets and databases what the Web of hypertext documents is to word processor files. The Linked Open Data cloud diagramms give an overview of the linked data sets that are available on the Web.
 
@@ -54,6 +52,8 @@ This allows both human-readable and machine-readable content/interaction to acce
 descriptive metadata simply by dereferencing HTTP URIs. 
 
 ### Elements of RDF
+Links to the basic references are given in [W3C semantics stack - references](standards.md#w3c-semantics-stack---references).
+
 #### RDF Statements or Triples
 The _Resource Description Framework (RDF)_ is a W3C standard (Hayes and Patel-Schneider 2014).  Information elements consist of RDF statements. An RDF statement consist of three parts: _Subject_, _Predicate_, and _Object_. This is called a _triple_.
 
@@ -66,14 +66,14 @@ A set of RDF statements is collected together in an _RDF Graph_. Figure 1 below 
 
 ![Figure 1. RDF Example: BB king](img/bb-king-rdf-example.png)
 
-Pseudo-RDF statement
+Pseudo-RDF triples
 ```turtle
 <B.B. King> <is a> <person> .
 <B.B. King> <is born on> <the 16th of September 1925> . 
 <B.B. King> <plays instrument> <guitar> .
 ```
 
-Valid RDF Statement expressed via the Turtle serialisation
+Valid RDF graph expressed via the Turtle serialisation
 ```turtle
 @prefix :   <http://example.org/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -122,11 +122,12 @@ The RDF statements in each of these examples is the same, but encoded or *serial
 
 #### Namespaces 
 
-The last thing to note about the above examples is the use of *namespaces*. Each *namespace* denotes a "vocabulary" which is a set of RDF terms. A prefix can be associated with a namespace which allows a URI from that namespace to be aliased to a more compact "colonised" form - e.g. `foaf:Person` &Implies; `<http://xmlns.com/foaf/0.1/Person>`. 
+The last thing to note about the above examples is the use of *namespaces*. Each *namespace* denotes a "vocabulary" which is a set of RDF terms. A local prefix can be associated with a namespace which allows a URI from that namespace to be aliased to a more compact "colonised" form - 
+e.g. `foaf:Person` == `<http://xmlns.com/foaf/0.1/Person>`. 
 
-There are many existing vocabularies published by W3C, DCMI, the OBO foundation, OGC, and various other initiatives including the Australian Government through AGLDWG. 
-A selection of vocabularies recommended for re-use are listed in [RDF vocabularies you can trust](trusted-rdf-vocabs). 
-As a general principle, if your application re-uses properties and types from well-known vocabularies then this enables greater data integration opportunities and the use of common tools to parse/render the data. For example, `FOAF` (or Friend-of-a-Friend) is a namespace with properties and types for describing people. It is used in the above example to express that B.B. King is a person. Use of FOAF allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/), [`dcterms:`](http://purl.org/dc/terms/). Domain-specific namespaces for binding context to the data using relevant well-known properties and types in the respective domains include [`sweet:`](http://sweetontology.net/) for the earth sciences, and [`envo:`](http://environmentontology.org/) for environment.
+There are many existing vocabularies and ontologies published by W3C, DCMI, the OBO foundation, OGC, and various other initiatives including the Australian Government through AGLDWG. 
+A selection that are recommended for re-use are listed in [RDF vocabularies and ontologies that you can trust](standards.md#standard-namespaces---rdf-vocabularies-and-ontologies-that-you-can-trust) with the namespace prefixes that are conventionally used. 
+Use of properties and types from well-known vocabularies in your application enables greater data integration opportunities, and common tools to parse/render the data. For example, `FOAF` (or Friend-of-a-Friend) is a namespace with properties and types for describing people. It is used in the above example to express that B.B. King is a person. Use of FOAF allows that piece of data to be integrated with other data that use `foaf:Person`. This applies to other defined types and properties, e.g. namespaces include [`rdfs:`](https://www.w3.org/TR/rdf-schema/), [`skos:`](https://www.w3.org/2004/02/skos/), [`owl:`](http://www.w3.org/2002/07/owl#), [`dc:`](https://dublincore.org/documents/dcmi-namespace/), [`dcterms:`](http://purl.org/dc/terms/). 
 
 Refer to *Section 1* of the "Linked Data Example 1.ipynb" Jupyter Notebook example.
 
@@ -136,7 +137,7 @@ Refer to *Section 1* of the "Linked Data Example 1.ipynb" Jupyter Notebook examp
 
 The HTTP protocol allows content-negotiation via headers (as key-value pair values) which accompany the request. The Accept request HTTP header advertises which content types, expressed as MIME types, the client is able to understand. Using content negotiation, the server then selects one of the proposals, uses it and informs the client of its choice with the Content-Type response header. Browsers set adequate values for this header depending on the context where the request is done: when fetching a CSS stylesheet a different value is set for the request than when fetching an image, video or a script.
 
-https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+[RFC 2616 section 14](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)
 > The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.
 
 The following example shows the `Accept` field that accompanies the HTTP request, i.e. *For this HTTP request, I would like (to Accept) this response format (`text/plain`)*:
@@ -164,7 +165,7 @@ Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 1: By Media T
 
 TODO: Add more content on conneg by profile 
 
-See https://www.w3.org/TR/dx-prof-conneg/
+See [Content negotiation by profile](https://www.w3.org/TR/dx-prof-conneg/) 
 
 Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 2: By Profile".
 

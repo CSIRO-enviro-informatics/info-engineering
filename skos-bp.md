@@ -3,7 +3,19 @@ permalink: /skos-bp.html
 ---
 
 # Best practice in formalizing a SKOS vocabulary
+_This page was originally developed as part of the [SEEGrid website](https://confluence.csiro.au/display/VOCAB/Best+practice+in+formalizing+a+SKOS+vocabulary)._
+
 Some best practices have been developed that will assist in the preparation of a well-behaved, maintainable vocabulary.
+
+(SKOS) is based on a vocabulary/thesaurus model, and was designed primarily to formalize existing vocabularies using the semantic web tools, and also smooth the transition towards the richer logic-based tools from ontology modeling. The aim of SKOS is to enable pre-existing controlled vocabularies to be consumed on the web and to allow vocabulary creators to publish born-digital vocabularies on the web.  To understand SKOS you have to have a basic understanding of controlled vocabularies (hierarchical relationships, broader and narrower terms where each node has a relationship)
+
+SKOS was built on RDF, and thus SKOS (a data sharing standard for formal logic and structure) data are represented as RDF triples.  This standard expresses data in a manner that is easily amenable to  computation and hence the usefulness. 
+
+- [SKOS Simple Knowledge Organization System Primer](https://www.w3.org/TR/skos-primer/)
+- [SKOS Simple Knowledge Organization System Reference](https://www.w3.org/TR/skos-reference/) 
+- [SKOS Play!](http://labs.sparna.fr/skos-play/convert) - convert Excel to SKOS
+- [SKOS Quality Checker](https://qskos.poolparty.biz/) based on qSKOS
+- [Key choices in the design of Simple Knowledge Organization System (SKOS)](https://doi.org/10.1016/j.websem.2013.05.001) - paper in Journal of Web Semantics
 
 ## Syntax
 
@@ -168,7 +180,7 @@ The Ontology resource provides a hook primarily for metadata relating to the doc
 *   `owl:versionIRI` carries a URI that identifies the fine-grained version information, for example an SVN tag for the source file
 *   `owl:priorVersion` allows you to identify a previous version
 
-```
+```turtle
 <http://resource.geosciml.org/vocabulary/timescale/isc-2010>
        a       owl:Ontology ;
        rdfs:label "Ontology document containing the International Stratigraphic Chart (2010)"@en ;
@@ -189,7 +201,7 @@ The Ontology resource provides a hook primarily for metadata relating to the doc
 
 A concept-scheme provides a home for metadata related to the vocabulary content as a whole, including versioning. The description of a concept-scheme may be found by following the `skos:inScheme` property in a concept description.
 
-```
+```turtle
 <http://resource.geosciml.org/classifierscheme/ics/2010/ischart>
       a       gts:GeologicTimescale , skos:ConceptScheme ;
       rdfs:isDefinedBy <http://resource.geosciml.org/vocabulary/timescale/isc-2010> ;
@@ -256,7 +268,7 @@ Each concept is described by a set of assertions using RDF properties from the c
 *   this allows traversal from atomic concepts to the vocabulary as a whole
 *   example: `isc:Silurian skos:inScheme <http://resource.geosciml.org/classifierscheme/ics/ischart/2010> .`
 
-```
+```turtle
 isc:Silurian
      a      skos:Concept ;
      owl:sameAs      <http://dbpedia.org/resource/Silurian> ;
@@ -291,7 +303,7 @@ A primary use of `skos:Collection` is to provide a resolvable resource for every
 2.  a `rdfs:label` and `skos:prefLabel` should be provided for display in user interfaces
 
 [Example](http://www.opengis.net/def/nil/OGC/0/):
-```
+```turtle
 nil:
       a       skos:Collection ;
       rdfs:label "OGC Nils 0" ;
@@ -300,7 +312,7 @@ nil:
 
 [Example](http://resource.geosciml.org/classifier/ics/ischart/Eras):
 
-```
+```turtle
 isc:  a       skos:Collection ;
       rdfs:label "Geologic Timescale Elements"^^xsd:string ;
       owl:versionInfo "Created with TopBraid Composer"@en ;
@@ -327,7 +339,7 @@ A number of container resources and patterns are available in RDF/OWL/SKOS.
 
 Basic RDF provides for resource types. For example:
 
-```
+```turtle
 my:ResourceA rdf:type skos:Concept.  
 my:ResourceB rdf:type skos:Concept .
 ```
@@ -338,7 +350,7 @@ asserts that the resources are members of the class indicated. The subject resou
 
 RDFS adds mechanisms to define subsumption hierarchies at the class level:
 
-```
+```turtle
 my:ResourceC rdfs:subClassOf some:ClassN .  
 my:ResourceD rdfs:subClassOf some:ClassN .  
 my:ResourceE rdfs:subClassOf my:ResourceD .
@@ -352,7 +364,7 @@ asserts that the resources are specializations of the class indicated. Both subj
 
 An OWL Ontology collects a set of classes, properties and axioms. By convention, `rdfs:isDefinedBy` links a resource to the ontology context that contains its definition:
 
-```
+```turtle
 my:ResourceD rdfs:isDefinedBy my:OntologyP .  
 my:propertyF rdfs:isDefinedBy my:OntologyP .
 ```
@@ -361,7 +373,7 @@ The subject resources may be either _individuals_ (including _properties_) or _c
 
 There is no inverse property to indicate the membership of an owl:Ontology. dct:hasPart has approximately the required semantics. For example:
 
-```
+```turtle
 <http://environment.data.gov.au/water/quality/def/op>
       a       owl:Ontology ;
       dct:hasPart wqop:QualityKind , wqop:qualityKind , wqop:constraint , wqop:ScaledQuantityKind , wqop:featureOfInterest , wqop:matrix , wqop:PropertyKind , wqop:propertyKind , wqop:SubstanceOrTaxon , wqop:applicableVocabulary , wqop:objectOfInterest , wqop:procedure .
@@ -373,7 +385,7 @@ If the ontology is also a void:Dataset or skos:ConceptScheme, then the predicate
 
 SKOS introduces the notion of a concept-scheme, which is a set of concepts with a related scope and well defined semantic relationships:
 
-```
+```turtle
 my:ConceptH skos:inScheme my:ConceptSchemeQ .  
 my:ConceptI skos:inScheme my:ConceptSchemeQ .
 ```
@@ -394,7 +406,7 @@ Collections are also _individuals_. Note that collection membership can be eithe
 
 Specialized semantic relations in SKOS provide for asserting specialization relations amongst individual concepts within a concept scheme:
 
-```
+```turtle
 my:ConceptH skos:broader my:ConceptJ .  
 my:ConceptI skos:broader my:ConceptJ .  
 my:ConceptJ skos:narrower my:ConceptH , my:ConceptI .
@@ -402,21 +414,21 @@ my:ConceptJ skos:narrower my:ConceptH , my:ConceptI .
 
 and between concepts from different schemes:
 
-```
+```turtle
 my:ConceptH skos:broadMatch her:ConceptK .  
 my:ConceptH skos:narrowMatch his:ConceptL .
 ```
 
 and also for approximate and exact matches between concepts from different schemes:
 
-```
+```turtle
 my:ConceptH skos:closeMatch her:ConceptM .  
 my:ConceptH skos:exactMatch his:ConceptN .
 ```
 
 Linking back to 4., the top-concept property, and its inverse, provide for entry points at the top of a concept-scheme
 
-```
+```turtle
 my:ConceptJ skos:topConceptOf my:ConceptSchemeQ .  
 my:ConceptSchemeQ skos:hasTopConcept my:ConceptJ .
 ```
@@ -464,7 +476,6 @@ Different patterns of usage for the extra field can result in few or many differ
 
 ## Complete examples
 
-*   [Geologic Timescale versions](http://resource.geosciml.org/vocabulary/timescale/)
+*   [Geologic Timescale versions](https://github.com/CGI-IUGS/timescale-data)
 *   [ISO 19115 Codelists](http://registry.it.csiro.au/def/isotc211)
 
--- [SimonCox](https://confluence.csiro.au/display/~cox075) - 06 Nov 2012
