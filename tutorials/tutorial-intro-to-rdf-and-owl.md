@@ -30,7 +30,7 @@ In this part of the tutorial, we will be creating a simple Pizza ontology. Befor
 
 The figure below shows a suggested information model for a simple Pizza ontology. We have 2 main classes, called `Pizza` and `PizzaTopping` and we'll be creating 2 pizza types - the classic, `MargheritaPizza` (which, according to legend, in 1889 was created and named after her...) and the `AussiePizza` (a local favourite).
 
-![Simple pizza model](img/pizza-model.png)
+![Simple pizza model](img/pizza-model.PNG)
 
 
 ### Exercise 1. 
@@ -65,14 +65,14 @@ Often you won't be creating an ontology from scratch, but rather importing this 
 https://protege.stanford.edu/ontologies/pizza/pizza.owl
 
 To import the Pizza ontology, navigate to the `Imports` tab and click on the "`Import from URL`" button.
-![Import the Pizza ontology from url](img/tbc-import-pizza-steps.png)
+![Import the Pizza ontology from url](img/tbc-import-pizza-steps.PNG)
 
 
 Enter in the Pizza ontology URL (see above) into the text input box like so:
-![Import the Pizza ontology from url](img/tbc-import-from-url-pizza.png)
+![Import the Pizza ontology from url](img/tbc-import-from-url-pizza.PNG)
 
 The imported Pizza ontology will appear in the Imports tab like so:
-![Import the Pizza ontology from url](img/tbc-import-tab-pizza-imported.png)
+![Import the Pizza ontology from url](img/tbc-import-tab-pizza-imported.PNG)
 
 For discussion: 
 * Take a few moments to navigate around the Pizza ontology
