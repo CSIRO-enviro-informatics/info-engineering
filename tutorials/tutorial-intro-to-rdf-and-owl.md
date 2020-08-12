@@ -8,7 +8,7 @@ In this tutorial, we will learn to:
 2. Import an ontology into the Topbraid editor
 3. Begin querying data using RDF and OWL
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 -->
 
 - [Tutorial: Introduction to RDF and OWL](#tutorial-introduction-to-rdf-and-owl)
   - [Learning Objectives](#learning-objectives)
