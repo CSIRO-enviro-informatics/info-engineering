@@ -16,6 +16,14 @@
 - Modeling - [Describing real world applications using ontologies](https://docs.google.com/presentation/d/19N2moAypUyuqYPIWSOE4mb0wIBVhFPenbpOkq3u4sYo) - [_Simon Cox_](https://orcid.org/0000-0002-3884-3420)
 - [Linked Data APIs]()
 
+## Tutorials
+
+- [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
+- [SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
+- [OWL Tutorials by University of Manchester](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/)
+
+
+
 ## SKOS
 - [Controlled Vocabularies and SKOS](https://campus.dariah.eu/resource/controlled-vocabularies-and-skos)
 
