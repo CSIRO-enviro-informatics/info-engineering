@@ -18,12 +18,13 @@ In this tutorial, we will learn to:
       - [1.1. Create your first class: Pizza class](#11-create-your-first-class-pizza-class)
       - [1.2. Create more  classes](#12-create-more-classes)
       - [1.3. Create hasTopping object property Pizza subclasses](#13-create-hastopping-object-property-pizza-subclasses)
-      - [1.4. Create the `MargheritaPizza` class](#14-create-the-margheritapizza-class)
+      - [1.4. Create the `MargheritaPizza` class and add an annotation](#14-create-the-margheritapizza-class-and-add-an-annotation)
+      - [1.5. Add semantics to the `MargheritaPizza` class](#15-add-semantics-to-the-margheritapizza-class)
       - [Extra exercise](#extra-exercise)
   - [Part 2. Import an existing ontology into the Topbraid editor (15-20mins)](#part-2-import-an-existing-ontology-into-the-topbraid-editor-15-20mins)
     - [Exercise 2. Import the Pizza ontology and explore its features](#exercise-2-import-the-pizza-ontology-and-explore-its-features)
-      - [2.1. Import the Pizza ontology :](#21-import-the-pizza-ontology-)
-      - [For discussion:](#for-discussion)
+      - [2.1. Import the Pizza ontology](#21-import-the-pizza-ontology)
+      - [For discussion](#for-discussion)
       - [Extra exercise](#extra-exercise-1)
   - [Part 3. Query the RDF data using SPARQL in Topbraid (15-20mins)](#part-3-query-the-rdf-data-using-sparql-in-topbraid-15-20mins)
     - [Introducing SPARQL](#introducing-sparql)
@@ -50,7 +51,7 @@ Attendees will:
 ## Pre-requisites and assumptions
 
 * Topbraid Composer Free installed
-* Familiarity with OWL and RDF
+* A little familiarity with [OWL](https://www.w3.org/OWL/) and [RDF](https://www.w3.org/RDF/) concepts
 
 ## Part 1. Creating a simple Pizza ontology using RDF and OWL (15-20mins)
 
@@ -74,6 +75,8 @@ Fire up Topbraid Composer. We'll be creating:
 
 In your new RDF 'mypizza' file, create a new class. 
 
+Click on the existing class `owl:Thing` and click on the "Create subclass" button. We subclass `owl:Thing` because in OWL, every  user-defined class is a subclass of `owl:Thing`.
+
 ![Create subclass button](img/tbc-class-panel-1.png)
 
 #### 1.2. Create more  classes
@@ -95,25 +98,40 @@ Select `owl:ObjectProperty` in the in the `Create property` panel.
 Add the name of the property in the text field, i.e. hasTopping.
 ![Create property panel](img/tbc-create-property-panel.png)
 
-This creates an OWL Object Property which can be used to relate two classes
+This creates an OWL `ObjectProperty` which can be used to relate instances of two classes. In OWL, there are 2 different property types `ObjectProperty` and `DatatypeProperty`. The latter can be used to relate an instance of a class and RDF literals and XML Schema datatypes, or *Datatypes*. 
 
-#### 1.4. Create the `MargheritaPizza` class
+#### 1.4. Create the `MargheritaPizza` class and add an annotation
 
-Create a new subclass of the `Pizza` class as you did earlier with the other classes.
+Create a new subclass of the `Pizza` class as you did earlier with the other classes, called `MargheritaPizza`.
+
+Often it is useful to add an annotation to the class. You will notice, there is a field called `rdf:label` in the "Annotations" panel. Also, there is a list of annotation `DatatypeProperty` items in the "Properties" panel (yellow icon).
+
+![TBC Annotations](img/tbc-annotations.png)
+
+Add an new annotation property, called `rdfs:comment`. Select `rdfs:comment` from the "Properties" panel, drag-and-drop it from the  "Properties" panel to the "Annotations" panel. Edit the `rdfs:comment` field and enter in some text about the `MargheritaPizza` like so:
+
+> According to legend, in 1889, the Margherita Pizza was created and named after Queen Margherita.
+
+
+#### 1.5. Add semantics to the `MargheritaPizza` class
 
 We now want to add more semantics to the `MargheritaPizza` class to express that it has a relationship with the `TomatoTopping` and the `CheeseTopping`. To do so, we need to introduce the idea of a *Class Restriction*.
+
+**Background to Class Restrictions** 
 
 To understand *Class Restrictions*, it's useful to think about it in terms of a Venn diagram. See below:
 
 ![Pizza topping class restriction example](img/pizza-class-restrictions-ex1.PNG)
 
-In OWL, we use Description Logic to capture class semantics. We use class restrictions to narrow down the possible logical statements about that class. Using the MargheritaPizza example, we know that it is a pizza that has cheese and tomato toppings. To express this, we create a restriction on the subClassOf property for MargheritaPizza with the following:
-* There exists a class where the `hasTopping` property is `CheeseTopping`
-* There exists a class where the `hasTopping` property is `TomatoTopping`
+In OWL, we use Description Logic to capture class semantics. We use class restrictions to narrow down the possible logical statements about that class and their set of instances. Using the MargheritaPizza example, we know that it is a pizza that has cheese and tomato toppings. To express this, we create a restriction on the subClassOf property for MargheritaPizza with the following:
+* There exists instances of Pizza where the `hasTopping` property is `CheeseTopping`
+* There exists instances of Pizza where the `hasTopping` property is `TomatoTopping`
 
 The other example in the diagram show that, the `BiancaPizza` is a pizza that has CheeseTopping but no TomatoTopping, and we can express that using subClassOf restrictions. 
 
-Therefore, we can use software reasoners to infer a list of pizzas which has no TomatoToppings, which would include the BiancaPizza. Similarly, we can use software reasoners to infer a list of pizzas which has CheeseToppings, which would include the BiancaPizza, AussiePizza and the MargheritaPizza.
+These restrictions can then be used in software reasoners to infer a list of pizzas which has no TomatoToppings, which would include the BiancaPizza. Similarly, we can use software reasoners to infer a list of pizzas which has CheeseToppings, which would include the BiancaPizza, AussiePizza and the MargheritaPizza.
+
+**Create the Pizza class restrictions**
 
 To create a subClassOf restriction, click on the dropdown button on the `rdfs:subClassOf` field, and select "Create restriction".
 
@@ -145,7 +163,7 @@ Often you won't be creating an ontology from scratch, but rather importing this 
 In the current project, create a new RDF file, called "pizza"
 
 
-#### 2.1. Import the Pizza ontology :
+#### 2.1. Import the Pizza ontology 
 
 In your new RDF 'pizza' file, import the Pizza ontology from this URL:
 [https://protege.stanford.edu/ontologies/pizza/pizza.owl](https://protege.stanford.edu/ontologies/pizza/pizza.owl)
@@ -160,7 +178,7 @@ Enter in the Pizza ontology URL (see above) into the text input box like so:
 The imported Pizza ontology will appear in the Imports tab like so:
 ![Import the Pizza ontology from url](img/tbc-import-tab-pizza-imported.PNG)
 
-#### For discussion: 
+#### For discussion
 * Take a few moments to navigate around the Pizza ontology
 * What do you notice about the Margherita Pizza definition?
 
@@ -304,4 +322,4 @@ Check out the [Learning resources](../learning-resources.md) section for more ma
 Other related pages:
 * SPARQL
   * [W3C SPARQL Specification](https://www.w3.org/TR/rdf-sparql-query/)
-  * 
+  
