@@ -32,9 +32,10 @@ In this tutorial, we will learn to:
     - [Exercise 3: Querying the Pizza ontology using SPARQL](#exercise-3-querying-the-pizza-ontology-using-sparql)
       - [3.1. Query the Pizza ontology and list the direct subclasses of `pizza:Pizza`](#31-query-the-pizza-ontology-and-list-the-direct-subclasses-of-pizzapizza)
       - [3.2. Query the Pizza ontology and list all subclasses of `pizza:Pizza` (direct and indirect)](#32-query-the-pizza-ontology-and-list-all-subclasses-of-pizzapizza-direct-and-indirect)
-      - [3.3. Find all Pizza classes that have `TomatoTopping`](#33-find-all-pizza-classes-that-have-tomatotopping)
-      - [3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`](#34-try-to-create-a-sparql-query-to-find-pizzas-that-has-a-garlictopping)
-      - [3.5. (Advanced) Find all Pizza classes that have `TomatoTopping` and all types of classes of `FishTopping`](#35-advanced-find-all-pizza-classes-that-have-tomatotopping-and-all-types-of-classes-of-fishtopping)
+      - [3.3. Query the Pizza ontology and list all subclasses of `pizza:Pizza` by its label](#33-query-the-pizza-ontology-and-list-all-subclasses-of-pizzapizza-by-its-label)
+      - [3.4. Find all Pizza classes that have `TomatoTopping`](#34-find-all-pizza-classes-that-have-tomatotopping)
+      - [3.5. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`](#35-try-to-create-a-sparql-query-to-find-pizzas-that-has-a-garlictopping)
+      - [3.6. Advanced querying](#36-advanced-querying)
     - [Going deeper](#going-deeper)
   - [References](#references)
 
@@ -267,7 +268,19 @@ WHERE {
 ```
 Discuss: What's happening here?
 
-#### 3.3. Find all Pizza classes that have `TomatoTopping` 
+#### 3.3. Query the Pizza ontology and list all subclasses of `pizza:Pizza` by its label 
+
+```
+SELECT ?x 
+WHERE {
+   ?x rdfs:subClassOf+ pizza:Pizza .
+   ?x rdfs:label ?label
+   FILTER  (regex(?label, "margherita", "i")) .
+}
+```
+Discuss: What's happening here?
+
+#### 3.4. Find all Pizza classes that have `TomatoTopping` 
 ```
 SELECT ?x 
 WHERE {
@@ -281,13 +294,15 @@ WHERE {
 ```
 Discuss: What's happening here?
 
-#### 3.4. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
+#### 3.5. Try to create a SPARQL query to find Pizzas that has a `GarlicTopping`
 
 ```
 
 ```
 
-#### 3.5. (Advanced) Find all Pizza classes that have `TomatoTopping` and all types of classes of `FishTopping`
+#### 3.6. Advanced querying
+
+Find all Pizza classes that have `TomatoTopping` and all types of classes of `FishTopping`
 ```
 SELECT ?x 
 WHERE {
@@ -303,6 +318,22 @@ WHERE {
         owl:someValuesFrom ?fishClasses
 	] .
     ?fishClasses rdfs:subClassOf+ pizza:FishTopping 
+}
+```
+
+Find all Pizza classes that have a topping with "seafood" in its label
+```
+SELECT ?x 
+WHERE {
+   ?x rdfs:subClassOf+ pizza:Pizza .
+   ?x rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty pizza:hasTopping; 
+        owl:someValuesFrom ?topping
+	] .
+   ?topping rdfs:subClassOf+ pizza:PizzaTopping .
+   ?topping rdfs:label ?label .
+   FILTER  (regex(?label, "seafood", "i")) .
 }
 ```
 
