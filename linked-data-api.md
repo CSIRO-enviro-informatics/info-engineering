@@ -1,7 +1,7 @@
 # Linked Data APIs: theory and practice
 
 <!-- TOC depthFrom:2 -->
-
+## Contents of this page
 - [Linked Data APIs: theory and practice](#linked-data-apis-theory-and-practice)
   - [Purpose](#purpose)
   - [Theory](#theory)

@@ -1,6 +1,7 @@
 # Standards for Linked Data and the Semantic Web 
 
 <!-- TOC depthFrom:2 -->
+## Contents of this page
 - [Standard namespaces - RDF vocabularies that you can trust](#standard-namespaces---rdf-vocabularies-and-ontologies-that-you-can-trust)
   - [RDF infrastructure](#rdf-infrastructure)
   - [Descriptive metadata](#descriptive-metadata)

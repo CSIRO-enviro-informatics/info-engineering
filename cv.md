@@ -1,6 +1,7 @@
 # Registers and controlled vocabularies
 
 <!-- TOC depthFrom:2 -->
+## Contents of this page
 - [Background](#background)
 - [Codelists and controlled vocabularies](#codelists-and-controlled-vocabularies)
   - [General](#general)
