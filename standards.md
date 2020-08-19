@@ -27,10 +27,11 @@
 There is no single place to track down existing ontologies relevant to your requirements. 
 These are a few places that do know about a useful set of ontologies as a potential starting point:  
 
-- [Linked open vocabularies](https://lov.linkeddata.es/dataset/lov/)
-- [Bioportal](https://bioportal.bioontology.org/)
-- [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) 
-- [Ontobee](http://www.ontobee.org/) - primarily for OBO Foundation ontologies
+- [Bioportal](https://bioportal.bioontology.org/) (mostly life sciences)
+- [Linked Open Data Cloud (search)](https://www.lod-cloud.net/datasets) (data and ontologies)
+- [Linked Open Vocabularies](https://lov.linkeddata.es/dataset/lov/) (general)
+- [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) (biomedical)
+- [Ontobee](http://www.ontobee.org/) (primarily for OBO Foundation ontologies)
 
 Note, however, that these sources only know about ontologies that have been registered with them, which is managed on an ad-hoc basis. 
 
