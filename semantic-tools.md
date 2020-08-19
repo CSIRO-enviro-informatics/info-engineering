@@ -1,6 +1,7 @@
 # Semantic web tools
 
 <!-- TOC depthFrom:2 -->
+## Contents of this page
 - [Creating and maintaining RDF or OWL](#creating-and-maintaining-rdf-or-owl)
 - [Preparing and maintaining SKOS vocabularies](#preparing-and-maintaining-skos-vocabularies)
 - [SPARQL and SHACL testing](#sparql-and-shacl-testing)

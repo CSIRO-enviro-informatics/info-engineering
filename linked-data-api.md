@@ -1,7 +1,7 @@
 # Linked Data APIs: theory and practice
 
 <!-- TOC depthFrom:2 -->
-
+## Contents of this page
 - [Linked Data APIs: theory and practice](#linked-data-apis-theory-and-practice)
   - [Purpose](#purpose)
   - [Theory](#theory)
@@ -159,7 +159,7 @@ For Linked Data applications, these are generally the mime-types that are accomo
 * `application/n-triples` (N-Triples serialisation)
 
 
-Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 1: By Media Type".
+Run through the *Content negotiation by Media Type* section in  [Tutorial on LD APIs Part 1](tutorials/tutorial-intro-to-ld-api-part1.md).
 
 #### By profile
 
@@ -167,7 +167,7 @@ TODO: Add more content on conneg by profile
 
 See [Content negotiation by profile](https://www.w3.org/TR/dx-prof-conneg/) 
 
-Refer to Jupyter Notebook example "Linked Data Example 2" in "Part 2: By Profile".
+Run through the *Content negotiation by Profile* section in  [Tutorial on LD APIs Part 1](tutorials/tutorial-intro-to-ld-api-part1.md).
 
 
 
@@ -216,20 +216,4 @@ A list of Linked Data API implementations and instances are listed below with th
 
 ### Worked example using pyLDAPI
 
-Use the `/example-code/pyldapi` directory as a starting point and a template for an implementation of a 
-pyLDAPI service.
-
-TODO: Create a tutorial for describing what's there
-
-TODO: Add a section about modifying it to include additional data items
-
-TODO: Add a section about modifying it to add features to the Pet Dog view
-
-TODO: Add a section about modifying it to refactor the data structure and reflect in the API views
-
-TODO: Add a section about modifying it to add a new media type
-
-TODO: Add a section about modifying it to add a new profile 
-
-TODO: Add a section about modifying it to include additional registers and new data type
-
+Run through [Tutorial on LD APIs Part 2](tutorials/tutorial-intro-to-ld-api-part2.md).

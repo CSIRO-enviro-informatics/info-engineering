@@ -1,9 +1,8 @@
 # Learning resources
-
-## Background readings
-- [Foundations of Semantic Web Technologies](https://www.semantic-web-book.org/index.html)
-- [Getting Started with Semantic Technologies](https://www.cambridgesemantics.com/blog/semantic-university/intro-semantic-web/)
-- [Semantic Web for the Working Ontologist: Effective Modeling for Linked Data, RDFS, and OWL](https://dl.acm.org/doi/book/10.1145/3382097)
+## Tutorials
+- [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
+- [SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
+- [OWL Tutorials by University of Manchester](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/)
 
 ## Presentations
 - [Introduction to the Semantic Web (tutorial)](https://www.w3.org/2009/Talks/0615-SanJose-tutorial-IH/Slides.pdf) by Ivan Herman from W3C - start at slide 44
@@ -16,13 +15,10 @@
 - Modeling - [Describing real world applications using ontologies](https://docs.google.com/presentation/d/19N2moAypUyuqYPIWSOE4mb0wIBVhFPenbpOkq3u4sYo) - [_Simon Cox_](https://orcid.org/0000-0002-3884-3420)
 - [Linked Data APIs]()
 
-## Tutorials
-
-- [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
-- [SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
-- [OWL Tutorials by University of Manchester](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/)
-
-
+## Background readings
+- [Foundations of Semantic Web Technologies](https://www.semantic-web-book.org/index.html)
+- [Getting Started with Semantic Technologies](https://www.cambridgesemantics.com/blog/semantic-university/intro-semantic-web/)
+- [Semantic Web for the Working Ontologist: Effective Modeling for Linked Data, RDFS, and OWL](https://dl.acm.org/doi/book/10.1145/3382097)
 
 ## SKOS
 - [Controlled Vocabularies and SKOS](https://campus.dariah.eu/resource/controlled-vocabularies-and-skos)
