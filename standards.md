@@ -2,6 +2,7 @@
 
 <!-- TOC depthFrom:2 -->
 ## Contents of this page
+- [Finding an ontology](#finding-an-ontology)
 - [Standard namespaces - RDF vocabularies that you can trust](#standard-namespaces---rdf-vocabularies-and-ontologies-that-you-can-trust)
   - [RDF infrastructure](#rdf-infrastructure)
   - [Descriptive metadata](#descriptive-metadata)
@@ -20,6 +21,18 @@
 <!-- /TOC -->
 
 [International standards context](standards-organizations.md) is a brief listing of the main standards organizations involved. 
+
+## Finding an ontology
+
+There is no single place to track down existing ontologies relevant to your requirements. 
+These are a few places that do know about a useful set of ontologies as a potential starting point:  
+
+- [Linked open vocabularies](https://lov.linkeddata.es/dataset/lov/)
+- [Bioportal](https://bioportal.bioontology.org/)
+- [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) 
+- [Ontobee](http://www.ontobee.org/) - primarily for OBO Foundation ontologies
+
+Note, however, that these sources only know about ontologies that have been registered with them, which is managed on an ad-hoc basis. 
 
 ## Standard namespaces - RDF vocabularies and ontologies that you can trust
 These ontologies and vocabularies of RDF terms are well maintained and widely used, so elements from them can reasonably be adopted in new ontologies. 
