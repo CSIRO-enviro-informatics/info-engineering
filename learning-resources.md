@@ -1,6 +1,7 @@
 # Learning resources
 ## Tutorials
 - [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
+- [Introduction to controlled vocabularies using SKOS](tutorials/tutorial-intro-to-controlled-vocabularies.md)
 - [SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
 - [OWL Tutorials by University of Manchester](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/)
 

@@ -42,9 +42,9 @@ Controlled vocabularies are provided with a variety of expressiveness:
 - [Environment Ontology (ENVO)](http://environmentontology.org/) - strongly axiomatized environment definitions (OBO Foundry)
 - [GEMET Thesaurus](https://www.eionet.europa.eu/gemet/en/webservices/) - General Multilingual _Environmental Thesaurus_ 
 - [CGI GeoSciML vocabularies](https://geosciml.org/resource/) - a suite of small vocabularies for geological maps
-- [GSQ vocabularies](https://github.com/geological-survey-of-queensland/vocabularies/tree/master/vocabularies) - Geology, resources
+- [GSQ vocabularies](https://vocabs.gsq.digital/vocabulary/) - Geology, resources
 - [OBO Foundry](http://www.obofoundry.org/) - Open Biological and Biomedical Ontologies
-- [Queensland CORVEG Database Vocabularies](https://linkeddata.tern.org.au/viewer/corveg/) - Ecology surveys
+- [Queensland CORVEG Database Vocabularies](https://linkeddata.tern.org.au/) - Ecology surveys
 - [R2R Controlled Vocabularies](https://www.rvdata.us/about/technical-details/vocabularies) - Oceanography
 - [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) - earth & environmental science 
 - UK Centre for Ecology and Hydrology 
