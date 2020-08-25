@@ -1,0 +1,16 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix gnaf: <http://linked.data.gov.au/def/gnaf#> .
+@prefix loci: <http://linked.data.gov.au/def/loci#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/dataset/gnaf-2016-05/address/GAQLD163292916> 
+    rdf:type 	gnaf:Address ; 
+    gnaf:hasPostcode 		4102 ;
+    gnaf:hasStreetLocality 	<http://linked.data.gov.au/dataset/gnaf-2016-05/streetLocality/QLD2314875> ;
+    rdfs:comment 		"41 Boggo Road, Dutton Park, QLD 4102"^^xsd:string .
