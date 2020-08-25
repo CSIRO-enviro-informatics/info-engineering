@@ -4,7 +4,7 @@
 
 - [SKOS schema](http://www.w3.org/TR/skos-reference/skos.rdf)
 - [MD_TopicCategoryCode SKOS](http://registry.it.csiro.au/def/isotc211/MD_TopicCategoryCode?_format=ttl) ([web page](http://registry.it.csiro.au/def/isotc211/MD_TopicCategoryCode))
-- [IUGS Simple Lithology SKOS](https://geosciml.org/resource/vocabulary/cgi/2016/simplelithology.rdf) ([web page](http://cgi.vocabs.ga.gov.au/object?uri=http://resource.geosciml.org/)classifier/cgi/lithology)
+- [IUGS Simple Lithology SKOS](https://geosciml.org/resource/vocabulary/cgi/2016/simplelithology.rdf) ([web page](http://cgi.vocabs.ga.gov.au/object?uri=http://resource.geosciml.org/classifier/cgi/lithology)
 - [Landform classifiers SKOS](http://registry.it.csiro.au/def/soil/au/asls/landform?_format=ttl) ([web page](http://registry.it.csiro.au/def/soil/au/asls/landform))
 - [Geological timescale](https://stratigraphy.org/icschart/ChronostratChart2020-03.pdf)
 - [Geological timescale schema](http://resource.geosciml.org/ontology/timescale/gts)
@@ -12,17 +12,30 @@
 
 ## Screenshots
 
-![](tutorials/img/tbc-skos-new-file.png)
-![](tutorials/img/tbc-skos-new-file-skos.png)
-![](tutorials/img/tbc-skos-new-concept.png)
-![](tutorials/img/tbc-skos-new-concept-pizza.png)
-![](tutorials/img/tbc-skos-pizza-labels.png)
-![](tutorials/img/tbc-skos-pizza-add-narrower.png)
-![](tutorials/img/tbc-skos-pizza-margherita.png)
-![](tutorials/img/tbc-skos-show associations.png)
-![](tutorials/img/tbc-skos-create-child.png)
-![](tutorials/img/tbc-skos-pizza-aussie.png)
-![](tutorials/img/tbc-skos-collection-toppings.png)
-![](tutorials/img/tbc-skos-collection-add-member.png)
-![](tutorials/img/tbc-skos-collection-member-cheese.png)
-![](tutorials/img/tbc-skos-concept-narrower-moz.png)
+![New file](tutorials/img/tbc-skos-new-file.png)
+
+![New SKOS file](tutorials/img/tbc-skos-new-file-skos.png)
+
+![New Concept](tutorials/img/tbc-skos-new-concept.png)
+
+![Pizza](tutorials/img/tbc-skos-new-concept-pizza.png)
+
+![Concept labels](tutorials/img/tbc-skos-pizza-labels.png)
+
+![Add narrower Concept](tutorials/img/tbc-skos-pizza-add-narrower.png)
+
+![Margherita Pizza](tutorials/img/tbc-skos-pizza-margherita.png)
+
+![Show associations](tutorials/img/tbc-skos-show-associations.png)
+
+![Create child](tutorials/img/tbc-skos-create-child.png)
+
+![Aussie Pizza](tutorials/img/tbc-skos-pizza-aussie.png)
+
+![Collection toppings](tutorials/img/tbc-skos-collection-toppings.png)
+
+![Add member concept](tutorials/img/tbc-skos-collection-add-member.png)
+
+![Cheese](tutorials/img/tbc-skos-collection-member-cheese.png)
+
+![Add narrower Mozarella](tutorials/img/tbc-skos-concept-narrower-moz.png)
