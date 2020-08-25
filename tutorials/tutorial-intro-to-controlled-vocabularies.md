@@ -12,30 +12,30 @@
 
 ## Screenshots
 
-![New file](tutorials/img/tbc-skos-new-file.png)
+![New file](img/tbc-skos-new-file.png)
 
-![New SKOS file](tutorials/img/tbc-skos-new-file-skos.png)
+![New SKOS file](img/tbc-skos-new-file-skos.png)
 
-![New Concept](tutorials/img/tbc-skos-new-concept.png)
+![New Concept](img/tbc-skos-new-concept.png)
 
-![Pizza](tutorials/img/tbc-skos-new-concept-pizza.png)
+![Pizza](img/tbc-skos-new-concept-pizza.png)
 
-![Concept labels](tutorials/img/tbc-skos-pizza-labels.png)
+![Concept labels](img/tbc-skos-pizza-labels.png)
 
-![Add narrower Concept](tutorials/img/tbc-skos-pizza-add-narrower.png)
+![Add narrower Concept](img/tbc-skos-pizza-add-narrower.png)
 
-![Margherita Pizza](tutorials/img/tbc-skos-pizza-margherita.png)
+![Margherita Pizza](img/tbc-skos-pizza-margherita.png)
 
-![Show associations](tutorials/img/tbc-skos-show-associations.png)
+![Show associations](img/tbc-skos-show-associations.png)
 
-![Create child](tutorials/img/tbc-skos-create-child.png)
+![Create child](img/tbc-skos-create-child.png)
 
-![Aussie Pizza](tutorials/img/tbc-skos-pizza-aussie.png)
+![Aussie Pizza](img/tbc-skos-pizza-aussie.png)
 
-![Collection toppings](tutorials/img/tbc-skos-collection-toppings.png)
+![Collection toppings](img/tbc-skos-collection-toppings.png)
 
-![Add member concept](tutorials/img/tbc-skos-collection-add-member.png)
+![Add member concept](img/tbc-skos-collection-add-member.png)
 
-![Cheese](tutorials/img/tbc-skos-collection-member-cheese.png)
+![Cheese](img/tbc-skos-collection-member-cheese.png)
 
-![Add narrower Mozarella](tutorials/img/tbc-skos-concept-narrower-moz.png)
+![Add narrower Mozarella](img/tbc-skos-concept-narrower-moz.png)
