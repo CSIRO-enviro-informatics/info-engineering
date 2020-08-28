@@ -7,3 +7,4 @@ pyldapi
 pytest
 flask-cors
 flask_swagger_ui
+sparqlwrapper
