@@ -220,7 +220,7 @@ We will create 2 new files - the `PizzaRenderer` class in the `/model/pizza.py` 
 ```
 
 
-#### Add a PizzaRenderer clas in a new pizza model
+#### Add a PizzaRenderer class in a new pizza model
 
 ```python
 from flask import Response, render_template
@@ -344,7 +344,7 @@ def pizza_instance(pizza_name):
 ```
 
 
-#### Modify the Pizza view template mad model to render abstract and thumbnail
+#### Modify the Pizza view template and model to render abstract and thumbnail
 
 Add this function to `/model/pizza.py` 
 ```python
