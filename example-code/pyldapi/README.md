@@ -1,9 +1,11 @@
 # Example pyldapi
 
 ## Quickstart 
-```
+```bash
 $ virtualenv venv
 $ source venv/bin/activate
+# Or on a windows bash client
+$ source venv/Scripts/activate
 $ pip install -r requirements.txt
 $ export FLASK_APP=app.py
 $ export FLASK_ENV=development
