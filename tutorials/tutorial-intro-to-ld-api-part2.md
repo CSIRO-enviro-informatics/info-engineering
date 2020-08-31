@@ -327,6 +327,7 @@ def pizza_instance(pizza_name):
 #### Add a basic view template for pizza
 
 ```jinja
+{% raw  %}
 {% extends "site_page_layout.html" %}
 
 {% block content %}
@@ -341,6 +342,7 @@ def pizza_instance(pizza_name):
     
     <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
 {% endblock %}
+{% endraw  %}
 ```
 
 
@@ -374,6 +376,7 @@ Modify the `__init__` function to add these lines to call the above function in 
 
 Update `/view/templates/page_pizza.html` with the following lines: 
 ```jinja
+{% raw  %}
 {% extends "site_page_layout.html" %}
 
 {% block content %}
@@ -387,4 +390,5 @@ Update `/view/templates/page_pizza.html` with the following lines:
     
     <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
 {% endblock %}
+{% endraw  %}
 ```
