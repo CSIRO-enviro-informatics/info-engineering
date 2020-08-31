@@ -41,7 +41,7 @@ def dog_instance(dog_id):
             break
     if instance is None:
         return Response("Not Found", status=404)
-    renderer = PetRenderer(request, request.base_url, instance, 'page_dog.html')
+    renderer = PetRenderer(request, request.base_url, instance)
     return renderer.render()
 
 @classes.route('/pets/')
@@ -82,3 +82,4 @@ def _get_pet_items(page, per_page):
       print(request.url_root)
       arr_items.append( ("{}pet/dog/{}".format(request.url_root, name), name, "pet") )  
    return arr_items
+

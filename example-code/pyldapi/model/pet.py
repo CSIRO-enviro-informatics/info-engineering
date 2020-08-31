@@ -4,14 +4,18 @@ from datetime import datetime
 from io import StringIO
 import requests
 from rdflib import Graph, URIRef, RDF, RDFS, XSD, OWL, Namespace, Literal, BNode
-import _config as config
 import json
 
 
 MyPetView = Profile("http://example.org/def/mypetview", "PetView", "A profile of my pet.", ['text/html', 'text/turtle'], 'text/html')
 
+pet_templates = {
+                    'mypetview': "page_dog.html",
+                    'default' : "page_dog.html"
+                }
+
 class PetRenderer(Renderer):
-    def __init__(self, request, uri, instance, pet_html_template, **kwargs):
+    def __init__(self, request, uri, instance , **kwargs):
         self.profiles= {'mypetview': MyPetView}
         self.default_profile_token = 'mypetview'
         super(PetRenderer, self).__init__(
@@ -21,12 +25,11 @@ class PetRenderer(Renderer):
            "request" : request,
            "uri" : uri,
         }
-        self.pet_html_template = pet_html_template
 
-    def _render_mypetview(self):
+    def _render_mypetview(self, html_template):
         self.headers['Profile'] = 'http://example.org/def/mypetview'
         if self.mediatype == "text/html":
-            return Response(render_template(self.pet_html_template, **self.instance))
+            return Response(render_template(html_template, **self.instance))
         elif self.mediatype == "text/turtle":
             return Response(self.export_rdf(self, rdf_mime='text/turtle'),
                             mimetype="application/json", status=200)
@@ -50,7 +53,8 @@ class PetRenderer(Renderer):
     def render(self):
         response = super(PetRenderer, self).render()
         if not response and self.profile == 'mypetview':
-            response = self._render_mypetview()
+            html_template = pet_templates[self.profile]
+            response = self._render_mypetview(html_template)
         elif self.profile == 'alt':
             return response
         else:
