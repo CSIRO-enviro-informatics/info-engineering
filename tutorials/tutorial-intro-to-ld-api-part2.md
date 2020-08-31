@@ -325,26 +325,9 @@ def pizza_instance(pizza_name):
 ```
 
 #### Add a basic view template for pizza
+Create a file called `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-1.txt].
 
-```jinja
-{% raw  %}
-{% extends "site_page_layout.html" %}
-
-{% block content %}
-    <h1>Pizza</h1>
-    <p>URI: {{ _context['uri'] }}</p>
-
-
-    <p>Abstract: {{ _data['abstract'] }}</p>
-    <p><img src="{{ _data['thumbnail'] }}"/></p>
-
-    <h2>Other views</h2>
-    
-    <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
-{% endblock %}
-{% endraw  %}
-```
-
+Add the following links top in (the following file in this link)[ld-api-intro-p2/pizza-2.txt]
 
 #### Modify the Pizza view template and model to render abstract and thumbnail
 
@@ -374,21 +357,5 @@ Modify the `__init__` function to add these lines to call the above function in 
         self._populate_instance_from_rdf()
 ```
 
-Update `/view/templates/page_pizza.html` with the following lines: 
-```jinja
-{% raw  %}
-{% extends "site_page_layout.html" %}
+Update `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-2.txt].
 
-{% block content %}
-    <h1>Pizza</h1>
-    <p>URI: {{ _context['uri'] }}</p>
-
-    <p>Abstract: {{ _data['abstract'] }}</p>
-    <p><img src="{{ _data['thumbnail'] }}"/></p>
-
-    <h2>Other views</h2>
-    
-    <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
-{% endblock %}
-{% endraw  %}
-```
