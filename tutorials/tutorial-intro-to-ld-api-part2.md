@@ -1,13 +1,11 @@
 # Tutorial: Introduction to LD APIs Part 2
 
 
-A tutorial to introduce LD APIsRDF and OWL concepts using 
-the TopBraid Composer (Free) Editor. 
+A tutorial to introduce LD APIs using pyldapi.
 
 In this tutorial, we will learn to:
-1. Build a very simple Pizza ontology from scratch
-2. Import an ontology into the Topbraid editor
-3. Begin querying data using RDF and OWL
+1. Extend an existing pyldapi implementation
+2. Add a new LD API
 
 
 <!-- TOC depthFrom:2 -->
