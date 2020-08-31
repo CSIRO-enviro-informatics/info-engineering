@@ -3,7 +3,7 @@ flask
 flask_paginate
 lxml
 rdflib
-pyldapi
+pyldapi==3.8
 pytest
 flask-cors
 flask_swagger_ui
