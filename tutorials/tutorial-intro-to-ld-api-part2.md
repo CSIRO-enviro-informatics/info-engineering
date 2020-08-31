@@ -1,25 +1,70 @@
 # Tutorial: Introduction to LD APIs Part 2
 
-Use the `/example-code/pyldapi` directory as a starting point and a template for an implementation of a 
+
+A tutorial to introduce LD APIsRDF and OWL concepts using 
+the TopBraid Composer (Free) Editor. 
+
+In this tutorial, we will learn to:
+1. Build a very simple Pizza ontology from scratch
+2. Import an ontology into the Topbraid editor
+3. Begin querying data using RDF and OWL
+
+
+<!-- TOC depthFrom:2 -->
+
+- [1. Learning Objectives](#1-learning-objectives)
+- [2. Pre-requisites and assumptions](#2-pre-requisites-and-assumptions)
+- [3. Introducing the Pet LD API](#3-introducing-the-pet-ld-api)
+    - [3.1. Basic layout of a pyLDAPI implementation](#31-basic-layout-of-a-pyldapi-implementation)
+    - [3.2 Pets Register](#32-pets-register)
+    - [3.3. Pets Viewer](#33-pets-viewer)
+    - [Exercise 1: Dive into the MVC framework for the Pet register](#exercise-1-dive-into-the-mvc-framework-for-the-pet-register)
+    - [Exercise 2. Add a new pet](#exercise-2-add-a-new-pet)
+    - [Exercise 3. Let's add a new Pet view](#exercise-3-lets-add-a-new-pet-view)
+    - [Summary](#summary)
+- [4. Adding a Pizza registry based on DBPedia resources](#4-adding-a-pizza-registry-based-on-dbpedia-resources)
+    - [4.1. Explore DBPedia and query Pizza resources](#41-explore-dbpedia-and-query-pizza-resources)
+    - [4.2. Add the Pizza register](#42-add-the-pizza-register)
+        - [4.2.1. Add a route for the Pizza Register](#421-add-a-route-for-the-pizza-register)
+        - [4.2.2. Add a function that will fetch the items for the response](#422-add-a-function-that-will-fetch-the-items-for-the-response)
+    - [4.3. Add the Pizza item views](#43-add-the-pizza-item-views)
+        - [4.3.1. Query DBPedia for RDF content](#431-query-dbpedia-for-rdf-content)
+        - [4.3.2. Add the Pizza instance model and views](#432-add-the-pizza-instance-model-and-views)
+        - [4.3.3. Add a PizzaRenderer class in a new pizza model](#433-add-a-pizzarenderer-class-in-a-new-pizza-model)
+        - [4.3.4. Update controller/classes.py to query for the pizzas](#434-update-controllerclassespy-to-query-for-the-pizzas)
+        - [4.3.5. Add a basic view template for pizza](#435-add-a-basic-view-template-for-pizza)
+        - [4.3.6. Modify the Pizza view template and model to render abstract and thumbnail](#436-modify-the-pizza-view-template-and-model-to-render-abstract-and-thumbnail)
+    - [Summary](#summary-1)
+
+<!-- /TOC -->
+
+## 1. Learning Objectives
+
+Attendees will:
+* Be exposed to a pyLDAPI example and gain an understanding of the elements of a Linked Data API
+* Learn how to exLearn basic elements of information modelling using OWL
+* Gain hands-on experience with ontology development and querying using Topbraid Composer tools
+* Learn the facets of the SPARQL language and how to query using SPARQL
+
+## 2. Pre-requisites and assumptions
+
+We will use the `/example-code/pyldapi` directory as a starting point and a template for an implementation of a 
 pyLDAPI service.
 
-TODO: Create a tutorial for describing what's there
+* Code checked out from https://github.com/CSIRO-enviro-informatics/info-engineering 
+* Python coding experience
+* Python environment setup following instructions from [example README.md](https://github.com/CSIRO-enviro-informatics/info-engineering/blob/master/example-code/pyldapi/README.md)
+* Familiarity with Linked Data concepts
 
-TODO: Add a section about modifying it to include additional data items
 
-TODO: Add a section about modifying it to add features to the Pet Dog view
+## 3. Introducing the Pet LD API
 
-TODO: Add a section about modifying it to refactor the data structure and reflect in the API views
+See presentation slides for overview of the Pet LD API.
 
-TODO: Add a section about modifying it to add a new media type
+### 3.1. Basic layout of a pyLDAPI implementation
 
-TODO: Add a section about modifying it to add a new profile 
-
-TODO: Add a section about modifying it to include additional registers and new data type
-
-## Recommended pyLDAPI framework
-
-Use Model-View-Controller
+The recommended layout of a pyLDAPI implementation is using the Model-View-Controller pattern and 
+creating directories to suit. See below:
 
 ```
 /
@@ -39,51 +84,74 @@ Use Model-View-Controller
 ...
 ```
 
+Let's run the example pyLDAPI. If you haven't run the code yet, run the following
+```
+$ virtualenv venv
+$ source venv/bin/activate
+# Or on a windows bash client
+$ source venv/Scripts/activate
+$ pip install -r requirements.txt
+$ export FLASK_APP=app.py
+$ export FLASK_ENV=development
+$ flask run --port=3000 --host=0.0.0.0
+```
 
-## Introducing the Pet LD API
-
-### Pets Register
+### 3.2 Pets Register
 
 Let's look at the Pets register at `http://localhost:3000/pets/`.
 
-Pet Register functionality is defined in `/controller/classes.py`.
+We can see the pets listed in the register. The Pet Register functionality is defined in the code base in the following file:
+ `/controller/classes.py` (just glance at it - we'll look at it in more detail later).
 
 
-### Pets Viewer
+### 3.3. Pets Viewer
 
-Let's look at the view of a Pet instance - Rex.
+Let's click on one of the Pets - Rex, and take a look at the view of a Pet instance.
 
-The relevant files to enable the Pet instance view are:
+We can see a basic landing page for the Pet Rex. 
+
+The information used to populat the Pet instance view comes from:
+- `/controller/classes.py`
+- `/model/pet.py`
+
+The Jinja template is used to render the view of the information for Rex. THis is located at:
+- `/view/templates/page_pet.html`
+
+### Exercise 1: Dive into the MVC framework for the Pet register
+
+Take a closer look at these files and draw a map of how the files are connected to render the Pet view.
 - `/controller/classes.py`
 - `/model/pet.py`
 - `/view/templates/page_pet.html`
 
-#### `/controller/classes.py`
+
+### Exercise 2. Add a new pet
+
+Now let's add a new pet. 
+
+Which file and where in the file would we add the required information?
+
+What do you notice about the information model?
 
 
-#### `/model/pet.py`
+### Exercise 3. Let's add a new Pet view
 
+Based on the template that exists, develop some code to add a new Pet view.
 
-#### `/view/templates/page_pet.html`
-
-
-### Exercise 1. Add a new pet
-
-
-### Exercise 2. Let's add a new Pet view
 
 ### Summary
 
 We have covered how the Pet section of the Example pyLDAPI works using a very basic (JSON) dataset 
 and how to extend it for different LD Views.
 
-## Adding a Pizza registry based on DBPedia resources
+
+## 4. Adding a Pizza registry based on DBPedia resources
 
 In this next part of the tutorial, we will work on adding a new Register - a Pizza register.
 We will reuse definitions from DBPedia and expose them as Linked Data resources.
 
 
-### Explore DBPedia and query Pizza resources
+### 4.1. Explore DBPedia and query Pizza resources
 
 Go to https://dbpedia.org/sparql and put in the SPARQL query text shown below in the Query editor.
 This will query all Pizza types and their label.
@@ -101,13 +169,13 @@ where {
 
 We can use this query as the basis for the Pizza Register we will now implement.
 
-### Add the Pizza register
+### 4.2. Add the Pizza register
 
 To implement the Pizza Register, we need to:
 - Add a route for the Pizza Register and implement the function to serve a response for that route
 - Add a function that will fetch the items for the response
 
-#### Add a route for the Pizza Register
+#### 4.2.1. Add a route for the Pizza Register
 
 ```python
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -155,7 +223,7 @@ pyLDAPI provides the Register function via `ContainerRenderer`. `ContainerRender
 - container member count
 
 
-#### Add a function that will fetch the items for the response
+#### 4.2.2. Add a function that will fetch the items for the response
 
 We will now implement the `_get_pizza_items()` function from the above and using the .
 The SPARQL Endpoint is located at http://dbpedia.org/sparql.
@@ -193,11 +261,11 @@ pyldapi expects the array of items in the register to have a particular structur
 
 You should now have a working pizza registry at http://localhost:3000/pizza/
 
-### Add the Pizza item views
+### 4.3. Add the Pizza item views
 
 We now want to enable users to be able to view each Pizza and some details, as well as content negotiate by media type.
 
-#### Query DBPedia for RDF content
+#### 4.3.1. Query DBPedia for RDF content
 
 DBPedia has a specific way of providing RDF content via the URL template (text/turtle):
 ```
@@ -206,7 +274,7 @@ http://dbpedia.org/data/{Name of the Resource}.ttl
 
 We want to load this into our environment and render the information in a tailored way.
 
-#### Add the Pizza instance model and views
+#### 4.3.2. Add the Pizza instance model and views
 
 We will create 2 new files - the `PizzaRenderer` class in the `/model/pizza.py` file and a Jinja view template file in `/view/templates/page_pizza.html`
 
@@ -220,7 +288,7 @@ We will create 2 new files - the `PizzaRenderer` class in the `/model/pizza.py` 
 ```
 
 
-#### Add a PizzaRenderer class in a new pizza model
+#### 4.3.3. Add a PizzaRenderer class in a new pizza model
 
 ```python
 from flask import Response, render_template
@@ -298,7 +366,7 @@ if __name__ == '__main__':
 
 ```
 
-#### Update controller/classes.py to query for the pizzas
+#### 4.3.4. Update controller/classes.py to query for the pizzas
 
 ```python  
 from model.pizza import PizzaRenderer
@@ -324,12 +392,12 @@ def pizza_instance(pizza_name):
     return renderer.render()
 ```
 
-#### Add a basic view template for pizza
+#### 4.3.5. Add a basic view template for pizza
 Create a file called `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-1.txt].
 
 Add the following links top in (the following file in this link)[ld-api-intro-p2/pizza-2.txt]
 
-#### Modify the Pizza view template and model to render abstract and thumbnail
+#### 4.3.6. Modify the Pizza view template and model to render abstract and thumbnail
 
 Add this function to `/model/pizza.py` 
 ```python
@@ -359,3 +427,8 @@ Modify the `__init__` function to add these lines to call the above function in 
 
 Update `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-2.txt].
 
+
+### Summary
+
+We have covered how the Pet section of the Example pyLDAPI works using a very basic (JSON) dataset 
+and how to extend it for different LD Views.
