@@ -1,4 +1,4 @@
-ARG JUPYTER_IMAGE=jupyter/minimal-notebook
+ARG JUPYTER_IMAGE=jupyter/minimal-notebook:54462805efcb
 FROM $JUPYTER_IMAGE
 #FROM jupyter/minimal-notebook
 
@@ -6,6 +6,7 @@ USER root
 RUN apt-get install -y build-essential gcc
 RUN apt-get update
 RUN apt-get install -y  libpq-dev python-dev
+RUN apt install -y  graphviz
 
 USER jovyan
 
