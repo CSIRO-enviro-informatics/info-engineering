@@ -2,8 +2,10 @@
 ## Tutorials
 - [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
 - [Introduction to controlled vocabularies using SKOS](tutorials/tutorial-intro-to-controlled-vocabularies.md)
-- [SPARQL Tutorial by Apache Jena](https://jena.apache.org/tutorials/sparql.html)
-- [OWL Tutorials by University of Manchester](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/)
+- [Introduction to Linked Data API - Part 1](tutorials/tutorial-intro-to-ld-api-part1.md)
+- [Introduction to Linked Data API - Part 2](tutorials/tutorial-intro-to-ld-api-part2.md)
+- [SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html) _by Apache Jena_
+- [OWL Tutorials](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/) _by University of Manchester_
 
 ## Presentations
 - [Introduction to the Semantic Web (tutorial)](https://www.w3.org/2009/Talks/0615-SanJose-tutorial-IH/Slides.pdf) by Ivan Herman from W3C - start at slide 44
@@ -11,8 +13,8 @@
 - [Designing Data for the Open World of the Web](./docs/Baker_20120606_2100-linked-data.pptx) - [_Tom Baker_](https://github.com/tombaker)
 - [Introduction to RDF and OWL](https://docs.google.com/presentation/d/1r-B2gzv0Dnz-8y71YSFQQfeipI9LISYYdHtetWmwSok)
 - [Introduction to Linked Data APIs: Part 1](https://docs.google.com/presentation/d/10MRrFRG7bgbATrl8o_AU-5X8Ulg1zQT_rjqYPYKdHVQ)
+- [Controlled vocabularies](https://docs.google.com/presentation/d/1WW_dQCtXDYhubD30JnHTAqrrGFNFu7EJKgNipamybC0)
 - [Metadata and semantics](https://docs.google.com/presentation/d/1hqP3FajVUAwdsb4o2OMkaBf5_K4JwzEE9tt_MFFEFok)
-- [Controlled vocabularies](https://docs.google.com/presentation/d/110YNOqfq6ImMt41m96rhMse1v12etcy3PmqphfkreNs)
 - Modeling - [Describing real world applications using ontologies](https://docs.google.com/presentation/d/19N2moAypUyuqYPIWSOE4mb0wIBVhFPenbpOkq3u4sYo) - [_Simon Cox_](https://orcid.org/0000-0002-3884-3420)
 - [Linked Data APIs]()
 
