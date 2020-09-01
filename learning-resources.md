@@ -1,9 +1,9 @@
 # Learning resources
 ## Tutorials
-- [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md)
-- [Introduction to controlled vocabularies using SKOS](tutorials/tutorial-intro-to-controlled-vocabularies.md)
-- [Introduction to Linked Data API - Part 1](tutorials/tutorial-intro-to-ld-api-part1.md)
-- [Introduction to Linked Data API - Part 2](tutorials/tutorial-intro-to-ld-api-part2.md)
+- [Introduction to RDF and OWL](tutorials/tutorial-intro-to-rdf-and-owl.md) _Jonathan Yu_
+- [Introduction to controlled vocabularies using SKOS](tutorials/tutorial-intro-to-controlled-vocabularies.md) _Simon Cox_
+- [Introduction to Linked Data API - Part 1](tutorials/tutorial-intro-to-ld-api-part1.md) _Jonathan Yu_
+- [Introduction to Linked Data API - Part 2](tutorials/tutorial-intro-to-ld-api-part2.md) _Jonathan Yu_
 - [SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html) _by Apache Jena_
 - [OWL Tutorials](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/) _by University of Manchester_
 
