@@ -288,82 +288,8 @@ We will create 2 new files - the `PizzaRenderer` class in the `/model/pizza.py` 
 
 #### 4.3.3. Add a PizzaRenderer class in a new pizza model
 
-```python
-{% raw %}
-from flask import Response, render_template
-from pyldapi import Renderer, Profile
-from datetime import datetime
-from io import StringIO
-import requests
-from rdflib import Graph, URIRef, RDF, RDFS, XSD, OWL, Namespace, Literal, BNode
-import json
-from rdflib.plugin import register, Serializer, Parser
-register('json-ld', Serializer, 'rdflib_jsonld.serializer', 'JsonLDSerializer')
-register('json-ld', Parser, 'rdflib_jsonld.parser', 'JsonLDParser')
+Add the following code in [the pizza-model.txt file](ld-api-intro-p2/pizza-model.txt) in `/model/pizza.py`.
 
-MyPizzaView = Profile("http://example.org/def/mypizzaview", "PizzaView", "A profile of my pizza.", ['text/html', 'text/turtle', 'application/ld+json'], 'text/html')
-
-class PizzaRenderer(Renderer):
-    def __init__(self, request, uri, instance, pizza_html_template, **kwargs):
-        self.profiles= {'mypizzaview': MyPizzaView}
-        self.default_profile_token = 'mypizzaview'
-        super(PizzaRenderer, self).__init__(
-            request, uri, self.profiles, self.default_profile_token, **kwargs)
-        self.instance = instance
-        self.instance['_context'] = {
-           "request" : request,
-           "uri" : uri,
-        }
-        self.instance['_data'] = {}
-        self._populate_instance_from_rdf()
-        self.pizza_html_template = pizza_html_template
-
-    def _render_mypizzaview(self):
-        self.headers['Profile'] = 'http://example.org/def/mypizzaview'
-        if self.mediatype == "text/html":
-            return Response(render_template(self.pizza_html_template, **self.instance))
-        elif self.mediatype == "text/turtle":
-            return Response(self.instance['graph'].serialize(format='turtle').decode('utf-8'),
-                            mimetype="text/turtle", status=200)
-        elif self.mediatype == "application/ld+json":
-            return Response(self.instance['graph'].serialize(format='json-ld', indent=4).decode('utf-8'),
-                            mimetype="application/ld+json", status=200)
-
-    def _get_rdf_mimetype(self, rdf_mime):
-        return self.RDF_SERIALIZER_TYPES_MAP[rdf_mime]
-
-    def _populate_instance_from_rdf(self):
-        query = """
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            PREFIX dbo: <http://dbpedia.org/ontology/>
-            select distinct ?abstract ?thumbnail
-            where {{
-                ?pizza dbo:abstract ?abstract .
-                ?pizza dbo:thumbnail ?thumbnail .
-                FILTER(LANG(?abstract) = "" || LANGMATCHES(LANG(?abstract), "en")) 
-            }} LIMIT 100
-            """.format(self.instance["_context"]['uri'])
-        print(query)
-        qres = self.instance['graph'].query(query)       
-        for row in qres:
-            self.instance['_data']['abstract'] = row[0]
-            self.instance['_data']['thumbnail'] = row[1]
-
-    # All `Renderer` subclasses _must_ implement render
-    def render(self):
-        response = super(PizzaRenderer, self).render()
-        if not response and self.profile == 'mypizzaview':
-            response = self._render_mypizzaview()
-        elif self.profile == 'alt':
-            return response
-        else:
-            raise NotImplementedError(self.profile)
-        return response
-
-if __name__ == '__main__':
-    pass
-{% endraw %}
-```
 
 #### 4.3.4. Update controller/classes.py to query for the pizzas
 
@@ -392,31 +318,13 @@ def pizza_instance(pizza_name):
 ```
 
 #### 4.3.5. Add a basic view template for pizza
-Create a file called `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-1.txt].
+Create a file called `/view/templates/page_pizza.html` with the following lines in [the pizza-1.txt file in this link](ld-api-intro-p2/pizza-1.txt).
 
-Add the following links top in (the following file in this link)[ld-api-intro-p2/pizza-2.txt]
+Add the following code in [the pizza-2.txt file in this link](ld-api-intro-p2/pizza-2.txt)
 
 #### 4.3.6. Modify the Pizza view template and model to render abstract and thumbnail
 
-Add this function to `/model/pizza.py` 
-```python
-    def _populate_instance_from_rdf(self):
-        query = """
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            PREFIX dbo: <http://dbpedia.org/ontology/>
-            select distinct ?abstract ?thumbnail
-            where {{
-                ?pizza dbo:abstract ?abstract .
-                ?pizza dbo:thumbnail ?thumbnail .
-                FILTER(LANG(?abstract) = "" || LANGMATCHES(LANG(?abstract), "en")) 
-            }} LIMIT 100
-            """.format(self.instance["_context"]['uri'])
-        print(query)
-        qres = self.instance['graph'].query(query)       
-        for row in qres:
-            self.instance['_data']['abstract'] = row[0]
-            self.instance['_data']['thumbnail'] = row[1]
-```
+Add the code in [the pizza-model2.txt file](ld-api-intro-p2/pizza-model.txt) in `/model/pizza.py`.
 
 Modify the `__init__` function to add these lines to call the above function in `/model/pizza.py`:
 ```python
