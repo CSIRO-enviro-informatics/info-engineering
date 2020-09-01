@@ -289,6 +289,7 @@ We will create 2 new files - the `PizzaRenderer` class in the `/model/pizza.py` 
 #### 4.3.3. Add a PizzaRenderer class in a new pizza model
 
 ```python
+{% raw %}
 from flask import Response, render_template
 from pyldapi import Renderer, Profile
 from datetime import datetime
@@ -361,7 +362,7 @@ class PizzaRenderer(Renderer):
 
 if __name__ == '__main__':
     pass
-
+{% endraw %}
 ```
 
 #### 4.3.4. Update controller/classes.py to query for the pizzas
