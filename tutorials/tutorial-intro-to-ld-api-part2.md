@@ -40,9 +40,8 @@ In this tutorial, we will learn to:
 
 Attendees will:
 * Be exposed to a pyLDAPI example and gain an understanding of the elements of a Linked Data API
-* Learn how to exLearn basic elements of information modelling using OWL
-* Gain hands-on experience with ontology development and querying using Topbraid Composer tools
-* Learn the facets of the SPARQL language and how to query using SPARQL
+* Learn how to extend a pyLDAPI implementation with new views and data
+* Learn how to add an API implementation to an existing pyLDAPI codebase
 
 ## 2. Pre-requisites and assumptions
 
