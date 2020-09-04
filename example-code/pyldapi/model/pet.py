@@ -9,14 +9,23 @@ import json
 
 MyPetView = Profile("http://example.org/def/mypetview", "PetView", "A profile of my pet.", ['text/html', 'text/turtle'], 'text/html')
 
+DetailedPetView = Profile("http://example.org/def/detailedpetview", "DetailedPetView", 
+        "A detailed profile of my pet.", 
+        ['text/html', 'application/ld+json'], 
+        'text/html')
+
 pet_templates = {
                     'mypetview': "page_dog.html",
+                    'detailedpetview': "page_dog_alldetails.html",
                     'default' : "page_dog.html"
                 }
 
 class PetRenderer(Renderer):
     def __init__(self, request, uri, instance , **kwargs):
-        self.profiles= {'mypetview': MyPetView}
+        self.profiles= {
+            'mypetview': MyPetView,
+            'detailedpetview': DetailedPetView
+        }
         self.default_profile_token = 'mypetview'
         super(PetRenderer, self).__init__(
             request, uri, self.profiles, self.default_profile_token, **kwargs)
@@ -45,6 +54,13 @@ class PetRenderer(Renderer):
         g.add((s, n.color, Literal(self.instance['color'])))
         return g.serialize(format=self._get_rdf_mimetype(rdf_mime))
 
+    def _render_detailedpetview(self, html_template):
+        self.headers['Profile'] = 'http://example.org/def/detailedpetview'
+        if self.mediatype == "text/html":
+            return Response(render_template(html_template, **self.instance))
+        elif self.mediatype == "application/ld+json":
+            return Response(self.export_rdf(self, rdf_mime='application/ld+json'),
+                            mimetype="application/ld+json", status=200)
 
     def _get_rdf_mimetype(self, rdf_mime):
         return self.RDF_SERIALIZER_TYPES_MAP[rdf_mime]
@@ -55,6 +71,9 @@ class PetRenderer(Renderer):
         if not response and self.profile == 'mypetview':
             html_template = pet_templates[self.profile]
             response = self._render_mypetview(html_template)
+        elif not response and self.profile == 'detailedpetview':
+            html_template = pet_templates[self.profile]
+            response = self._render_mypetview(html_template)            
         elif self.profile == 'alt':
             return response
         else:

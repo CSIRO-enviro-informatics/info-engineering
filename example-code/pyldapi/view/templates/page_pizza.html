@@ -1,0 +1,13 @@
+{% extends "site_page_layout.html" %}
+
+{% block content %}
+    <h1>Pizza</h1>
+    <p>URI: {{ _context['uri'] }}</p>
+
+    <p>Abstract: {{ _data['abstract'] }}</p>
+    <p><img src="{{ _data['thumbnail'] }}"/></p>
+    <p>Derived from: <a href="{{ _data['derivedFromUri'] }}">{{ _data['derivedFromUri'] }}</a></p>
+    <h2>Other views</h2>
+    
+    <a href="{{ _context['uri']}}?_profile=alt">Alternate profiles</a>
+{% endblock %}
