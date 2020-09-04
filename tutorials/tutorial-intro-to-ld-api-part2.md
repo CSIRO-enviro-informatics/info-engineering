@@ -319,7 +319,6 @@ def pizza_instance(pizza_name):
 #### 4.3.5. Add a basic view template for pizza
 Create a file called `/view/templates/page_pizza.html` with the following lines in [the pizza-1.txt file in this link](ld-api-intro-p2/pizza-1.txt).
 
-Add the following code in [the pizza-2.txt file in this link](ld-api-intro-p2/pizza-2.txt)
 
 #### 4.3.6. Modify the Pizza view template and model to render abstract and thumbnail
 
@@ -331,10 +330,13 @@ Modify the `__init__` function to add these lines to call the above function in 
         self._populate_instance_from_rdf()
 ```
 
-Update `/view/templates/page_pizza.html` with the following lines in (the following file in this link)[ld-api-intro-p2/pizza-2.txt].
+Add the following code in [the pizza-2.txt file in this link](ld-api-intro-p2/pizza-2.txt)
 
 
 ### Summary
 
 We have covered how the Pet section of the Example pyLDAPI works using a very basic (JSON) dataset 
 and how to extend it for different LD Views.
+
+We also showed how we can take some existing RDF resources and create a Pizza LD API - Pizza register, Pizza model and views.
+We showed how to pull in different data content into the views.
