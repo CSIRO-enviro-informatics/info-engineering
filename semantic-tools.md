@@ -50,6 +50,7 @@
 - [pyLODE](https://github.com/RDFLib/pyLODE)
 - [ELDA](https://github.com/epimorphics/elda)
 - [pyLDAPI](https://github.com/RDFLib/pyLDAPI)
+- [BioPortal](https://bioportal.bioontology.org) - research submissions in any domain
 
 ## Full service SKOS/RDF platforms
 - [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/)
